@@ -200,14 +200,13 @@ body {
   min-width: 0
 }
 [class*=__container] {
-  max-width: 86.25rem;
-  margin: 0 auto;
-  padding: 0 1.25rem
+  max-width: 93.125rem;
+  margin: 0 auto
 }
 [class*="--gc"] {
   display: grid;
   min-width: 0;
-  grid-template-columns: 1.25rem 1fr minmax(auto,83.75rem) 1fr 1.25rem
+  grid-template-columns: 1.25rem 1fr minmax(auto,93.125rem) 1fr 1.25rem
 }
 [class*="--gc"]>* {
   min-width: 0;
@@ -817,16 +816,16 @@ body::after {
   width: 100%;
   -o-object-fit: contain;
   object-fit: contain;
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1)
+  -webkit-transform: scale(1.25) translateY(50px);
+  transform: scale(1.25) translateY(50px)
 }
 .hero-home-page__img picture img,
 .hero-home-page__img picture source {
   width: 100%;
   -o-object-fit: contain;
   object-fit: contain;
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1)
+  -webkit-transform: scale(1.25) translateY(50px);
+  transform: scale(1.25) translateY(50px)
 }
 .steps-home-page {
   position: relative;
@@ -856,7 +855,7 @@ body::after {
 .steps-home-page__items {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+  grid-template-columns: repeat(4,1fr);
   -webkit-column-gap: 3.125rem;
   -moz-column-gap: 3.125rem;
   column-gap: 3.125rem;
@@ -1354,12 +1353,6 @@ body::after {
   -o-object-fit: cover;
   object-fit: cover
 }
-.reviews-home-page .swiper-button-prev {
-  left: -5.625rem
-}
-.reviews-home-page .swiper-button-next {
-  right: -5.625rem
-}
 .reviews-home-page .swiper-button-disabled {
   opacity: .2
 }
@@ -1392,6 +1385,14 @@ body::after {
 }
 .swiper-button-lock {
   display: none!important
+}
+@media (min-width:95.625em) {
+  [class*=__container] {
+    padding-left: 4.6875rem
+  }
+  [class*=__container] {
+    padding-right: 4.6875rem
+  }
 }
 @media (min-width:120em) {
   .checkbox__text {
@@ -1604,6 +1605,31 @@ body::after {
   .reviews-home-page .swiper-button-prev {
     width: 3.5rem
   }
+  .reviews-home-page .swiper-button-prev {
+    left: -5.625rem
+  }
+  .reviews-home-page .swiper-button-next {
+    right: -5.625rem
+  }
+}
+@media (max-width:62em) {
+  .reviews-home-page__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .9375rem
+  }
+  .reviews-home-page .swiper-button-next,
+  .reviews-home-page .swiper-button-prev {
+    position: static;
+    bottom: auto
+  }
+  .reviews-home-page .swiper-button-prev {
+    left: -3.125rem
+  }
+  .reviews-home-page .swiper-button-next {
+    right: -3.125rem
+  }
 }
 @media (max-width:48em) {
   .checkbox__text {
@@ -1613,9 +1639,6 @@ body::after {
     -webkit-column-gap: 1.25rem;
     -moz-column-gap: 1.25rem;
     column-gap: 1.25rem
-  }
-  .title {
-    font-size: 1.5rem
   }
   .header__container {
     padding-top: 1.3125rem
@@ -1644,30 +1667,6 @@ body::after {
     -webkit-column-gap: 1.25rem;
     -moz-column-gap: 1.25rem;
     column-gap: 1.25rem
-  }
-  .hero-home-page__container {
-    padding-top: 3.75rem
-  }
-  .hero-home-page__container h1 {
-    margin-bottom: 1.875rem
-  }
-  .hero-home-page__decor {
-    width: 8.75rem
-  }
-  .hero-home-page__decor {
-    height: 9.375rem
-  }
-  .hero-home-page__label p {
-    font-size: 1rem
-  }
-  .hero-home-page__text {
-    margin-bottom: 1.25rem
-  }
-  .hero-home-page__text span {
-    font-size: 1rem
-  }
-  .hero-home-page__text p {
-    font-size: .9375rem
   }
   .steps-home-page {
     padding-bottom: 3.75rem
@@ -1814,17 +1813,41 @@ body::after {
     width: 2.5rem
   }
 }
-@media (max-width:93.75em) {
-  .reviews-home-page__buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: .9375rem
+@media (max-width:20em) {
+  [class*=__container] {
+    padding-left: 1.25rem
   }
-  .reviews-home-page .swiper-button-next,
-  .reviews-home-page .swiper-button-prev {
-    position: static;
-    bottom: auto
+  [class*=__container] {
+    padding-right: 1.25rem
+  }
+}
+@media (max-width:68.75em) {
+  .title {
+    font-size: 1.5rem
+  }
+  .hero-home-page__container {
+    padding-top: 3.75rem
+  }
+  .hero-home-page__container h1 {
+    margin-bottom: 1.875rem
+  }
+  .hero-home-page__decor {
+    width: 7.5rem
+  }
+  .hero-home-page__decor {
+    height: 8.125rem
+  }
+  .hero-home-page__label p {
+    font-size: 1rem
+  }
+  .hero-home-page__text {
+    margin-bottom: 1.25rem
+  }
+  .hero-home-page__text span {
+    font-size: 1rem
+  }
+  .hero-home-page__text p {
+    font-size: .9375rem
   }
 }
 @media (max-width:61.99875em) {
@@ -2001,6 +2024,9 @@ body::after {
     border-top: .5rem solid #004020;
     top: 4.0625rem
   }
+  .steps-home-page__items {
+    grid-template-columns: repeat(auto-fit,minmax(16.25rem,1fr))
+  }
   .steps-home-page {
     padding-top: 8.125rem
   }
@@ -2141,6 +2167,14 @@ body::after {
     width: 100%
   }
 }
+@media (min-width:20em)and (max-width:95.625em) {
+  [class*=__container] {
+    padding-left: clamp(1.25rem ,.3409090909rem + 4.5454545455vw ,4.6875rem)
+  }
+  [class*=__container] {
+    padding-right: clamp(1.25rem ,.3409090909rem + 4.5454545455vw ,4.6875rem)
+  }
+}
 @media (min-width:48em)and (max-width:120em) {
   .checkbox__text {
     font-size: clamp(.875rem ,.625rem + .5208333333vw ,1.25rem)
@@ -2149,9 +2183,6 @@ body::after {
     -webkit-column-gap: clamp(1.25rem ,.2083333333rem + 2.1701388889vw ,2.8125rem);
     -moz-column-gap: clamp(1.25rem ,.2083333333rem + 2.1701388889vw ,2.8125rem);
     column-gap: clamp(1.25rem ,.2083333333rem + 2.1701388889vw ,2.8125rem)
-  }
-  .title {
-    font-size: clamp(1.5rem ,.5rem + 2.0833333333vw ,3rem)
   }
   .header__container {
     padding-top: clamp(1.3125rem ,.8125rem + 1.0416666667vw ,2.0625rem)
@@ -2180,30 +2211,6 @@ body::after {
     -webkit-column-gap: clamp(1.25rem ,-.8333333333rem + 4.3402777778vw ,4.375rem);
     -moz-column-gap: clamp(1.25rem ,-.8333333333rem + 4.3402777778vw ,4.375rem);
     column-gap: clamp(1.25rem ,-.8333333333rem + 4.3402777778vw ,4.375rem)
-  }
-  .hero-home-page__container {
-    padding-top: clamp(3.75rem ,1.4166666667rem + 4.8611111111vw ,7.25rem)
-  }
-  .hero-home-page__container h1 {
-    margin-bottom: clamp(1.875rem ,1.0416666667rem + 1.7361111111vw ,3.125rem)
-  }
-  .hero-home-page__decor {
-    width: clamp(8.75rem ,6.6666666667rem + 4.3402777778vw ,11.875rem)
-  }
-  .hero-home-page__decor {
-    height: clamp(9.375rem ,6.5416666667rem + 5.9027777778vw ,13.625rem)
-  }
-  .hero-home-page__label p {
-    font-size: clamp(1rem ,.6666666667rem + .6944444444vw ,1.5rem)
-  }
-  .hero-home-page__text {
-    margin-bottom: clamp(1.25rem ,.4166666667rem + 1.7361111111vw ,2.5rem)
-  }
-  .hero-home-page__text span {
-    font-size: clamp(1rem ,.6666666667rem + .6944444444vw ,1.5rem)
-  }
-  .hero-home-page__text p {
-    font-size: clamp(.9375rem ,.7291666667rem + .4340277778vw ,1.25rem)
   }
   .steps-home-page {
     padding-bottom: clamp(3.75rem ,2.7083333333rem + 2.1701388889vw ,5.3125rem)
@@ -2350,9 +2357,44 @@ body::after {
     width: clamp(2.5rem ,1.8333333333rem + 1.3888888889vw ,3.5rem)
   }
 }
+@media (min-width:68.75em)and (max-width:120em) {
+  .title {
+    font-size: clamp(1.5rem ,-.512195122rem + 2.9268292683vw ,3rem)
+  }
+  .hero-home-page__container {
+    padding-top: clamp(3.75rem ,-.9451219512rem + 6.8292682927vw ,7.25rem)
+  }
+  .hero-home-page__container h1 {
+    margin-bottom: clamp(1.875rem ,.1981707317rem + 2.4390243902vw ,3.125rem)
+  }
+  .hero-home-page__decor {
+    width: clamp(7.5rem ,1.631097561rem + 8.5365853659vw ,11.875rem)
+  }
+  .hero-home-page__decor {
+    height: clamp(8.125rem ,.7469512195rem + 10.7317073171vw ,13.625rem)
+  }
+  .hero-home-page__label p {
+    font-size: clamp(1rem ,.3292682927rem + .9756097561vw ,1.5rem)
+  }
+  .hero-home-page__text {
+    margin-bottom: clamp(1.25rem ,-.4268292683rem + 2.4390243902vw ,2.5rem)
+  }
+  .hero-home-page__text span {
+    font-size: clamp(1rem ,.3292682927rem + .9756097561vw ,1.5rem)
+  }
+  .hero-home-page__text p {
+    font-size: clamp(.9375rem ,.5182926829rem + .6097560976vw ,1.25rem)
+  }
+}
 @media (min-width:62em)and (max-width:120em) {
   .header__desk {
     width: clamp(9.375rem ,6.1681034483rem + 5.1724137931vw ,12.375rem)
+  }
+  .reviews-home-page .swiper-button-prev {
+    left: clamp(-5.625rem ,-.4525862069rem + -4.3103448276vw ,-3.125rem)
+  }
+  .reviews-home-page .swiper-button-next {
+    right: clamp(-5.625rem ,-.4525862069rem + -4.3103448276vw ,-3.125rem)
   }
 }
 @media (any-hover:hover) {
