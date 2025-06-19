@@ -1166,7 +1166,8 @@ body::after {
   margin: 0 auto
 }
 .faq-home-page {
-  position: relative
+  position: relative;
+  background-color: rgba(0,0,0,0)
 }
 .faq-home-page::before {
   content: "";
@@ -1180,7 +1181,7 @@ body::after {
   background: rgba(0,0,0,0);
   border-radius: 50%;
   border-top: 1.4375rem solid #004020;
-  border-bottom: 1.4375rem solid red;
+  border-bottom: 1.4375rem solid #004020;
   z-index: -1;
   pointer-events: none
 }
@@ -1970,7 +1971,8 @@ body::after {
   }
   .faq-home-page::before {
     border-top: .5rem solid #004020;
-    border-bottom: .5rem solid green;
+    border-bottom: .5rem solid #004020;
+    border-bottom: none;
     top: 3.75rem
   }
 }
