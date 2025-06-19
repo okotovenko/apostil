@@ -58,6 +58,10 @@
   font-weight: 400;
   font-style: normal
 }
+._icon-arrow-right:before {
+  content: "";
+  color: #004020
+}
 ._icon-arrow:before {
   content: "";
   color: #004020
@@ -1326,20 +1330,13 @@ body::after {
 .reviews-home-page .swiper-button-next,
 .reviews-home-page .swiper-button-prev {
   position: absolute;
-  bottom: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center
+  bottom: 50%
 }
 .reviews-home-page .swiper-button-prev {
   left: -3.75rem
 }
 .reviews-home-page .swiper-button-next {
-  right: -3.75rem;
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-  -webkit-transform-origin: center center;
-  transform-origin: center center
+  right: -3.75rem
 }
 .reviews-home-page .swiper-button-disabled {
   opacity: .2
@@ -1763,13 +1760,17 @@ body::after {
   .reviews-home-page .swiper-button-next,
   .reviews-home-page .swiper-button-prev {
     bottom: .625rem;
-    position: relative
+    position: inherit
   }
   .reviews-home-page .swiper-button-prev {
     left: 0
   }
   .reviews-home-page .swiper-button-next {
     right: 0
+  }
+  .reviews-home-page .swiper-button-next::before {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
   }
 }
 @media (max-width:61.99875em) {
