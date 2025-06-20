@@ -519,7 +519,8 @@ body::after {
   font-weight: 600;
   line-height: 146%;
   opacity: 0;
-  font-family: Gilroy-Semibold
+  font-family: Gilroy-Semibold;
+  font-size: 3rem
 }
 .title.animation {
   -webkit-animation: top .3s .3s linear both;
@@ -1426,9 +1427,6 @@ body::after {
   .button {
     padding: .9375rem
   }
-  .title {
-    font-size: 3rem
-  }
   .header__container {
     padding-top: 2.0625rem
   }
@@ -1857,9 +1855,6 @@ body::after {
   .button {
     padding: .625rem
   }
-  .title {
-    font-size: 1.5rem
-  }
   .hero-home-page__container {
     padding-top: 3.75rem
   }
@@ -2110,7 +2105,8 @@ body::after {
 }
 @media (max-width:47.99875em) {
   .title {
-    text-align: center
+    text-align: center;
+    font-size: 1.5rem
   }
   .hero-home-page__label::before {
     top: 1rem;
@@ -2228,9 +2224,6 @@ body::after {
   }
   .button {
     padding: clamp(.625rem ,.2057926829rem + .6097560976vw ,.9375rem)
-  }
-  .title {
-    font-size: clamp(1.5rem ,-.512195122rem + 2.9268292683vw ,3rem)
   }
   .hero-home-page__container {
     padding-top: clamp(3.75rem ,-.9451219512rem + 6.8292682927vw ,7.25rem)
