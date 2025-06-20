@@ -1055,7 +1055,8 @@ body::after {
 .choose-home-page__img {
   border-radius: 15.3125rem;
   position: relative;
-  min-height: 17.5rem
+  min-height: 17.5rem;
+  height: 100%
 }
 .choose-home-page__img::before {
   content: "";
@@ -1542,6 +1543,9 @@ body::after {
   .choose-home-page__container h2 {
     margin-bottom: 2.625rem
   }
+  .choose-home-page__left ul li p {
+    font-size: 1.25rem
+  }
   .choose-home-page__frame {
     width: 19rem
   }
@@ -1660,6 +1664,9 @@ body::after {
   }
   .steps-home-page__item p {
     font-size: 1.125rem
+  }
+  .choose-home-page__left ul li p {
+    font-size: .875rem
   }
   .choose-home-page__item ul {
     gap: .75rem
@@ -1859,6 +1866,21 @@ body::after {
   }
   [class*=__container] {
     padding-right: 1.25rem
+  }
+}
+@media (max-width:81.25em) {
+  .checkbox__label:before {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px
+  }
+  .choose-home-page__left {
+    max-width: 31.25rem
+  }
+  .choose-home-page__li {
+    flex: 0 0 2.8125rem;
+    width: 2.8125rem;
+    height: 2.8125rem
   }
 }
 @media (max-width:68.75em) {
@@ -2128,6 +2150,11 @@ body::after {
   }
 }
 @media (max-width:47.99875em) {
+  .checkbox__label:before {
+    flex: 0 0 25px;
+    width: 25px;
+    height: 25px
+  }
   .title {
     text-align: center;
     font-size: 1.5rem
@@ -2469,6 +2496,9 @@ body::after {
   }
   .steps-home-page__item p {
     font-size: clamp(1.125rem ,.9913793103rem + .2155172414vw ,1.25rem)
+  }
+  .choose-home-page__left ul li p {
+    font-size: clamp(.875rem ,.474137931rem + .6465517241vw ,1.25rem)
   }
   .choose-home-page__item ul {
     gap: clamp(.75rem ,.4159482759rem + .5387931034vw ,1.0625rem)
