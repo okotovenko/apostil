@@ -200,12 +200,13 @@ body {
   min-width: 0
 }
 [class*=__container] {
+  max-width: 93.125rem;
   margin: 0 auto
 }
 [class*="--gc"] {
   display: grid;
   min-width: 0;
-  grid-template-columns: 1.25rem 1fr minmax(auto,74.375rem) 1fr 1.25rem
+  grid-template-columns: 1.25rem 1fr minmax(auto,93.125rem) 1fr 1.25rem
 }
 [class*="--gc"]>* {
   min-width: 0;
@@ -519,8 +520,7 @@ body::after {
   font-weight: 600;
   line-height: 146%;
   opacity: 0;
-  font-family: Gilroy-Semibold;
-  font-size: 3rem
+  font-family: Gilroy-Semibold
 }
 .title.animation {
   -webkit-animation: top .3s .3s linear both;
@@ -724,7 +724,7 @@ body::after {
 .hero-home-page__decor {
   position: absolute;
   left: -5rem;
-  top: -2.1875rem;
+  top: -1.5625rem;
   z-index: 1;
   pointer-events: none
 }
@@ -836,21 +836,22 @@ body::after {
 }
 .steps-home-page {
   position: relative;
-  padding-top: 3.75rem;
+  padding-top: 8.75rem;
   background-color: rgba(0,0,0,0)
 }
 .steps-home-page::before {
   content: "";
   position: absolute;
-  left: -50%;
+  left: -35%;
   right: 0;
   margin: 0 auto;
-  top: -3.4375rem;
-  width: 200%;
+  top: -2.5rem;
+  width: 172%;
   aspect-ratio: 1/1;
   background: rgba(0,0,0,0);
   border-radius: 50%;
-  border-top: 1.4375rem solid #004020;
+  border: 1.4375rem solid #004020;
+  border-bottom: 1.4375rem solid #fff;
   z-index: -1;
   pointer-events: none
 }
@@ -895,7 +896,6 @@ body::after {
   opacity: 0
 }
 .steps-home-page__item h3 {
-  font-size: 1.25rem;
   font-weight: 700;
   font-family: Gilroy-Bold
 }
@@ -996,6 +996,10 @@ body::after {
   width: 100%;
   justify-content: space-between;
   gap: .625rem
+}
+.choose-home-page__left {
+  width: 100%;
+  max-width: 37.5rem
 }
 .choose-home-page__left ul {
   display: flex;
@@ -1192,15 +1196,15 @@ body::after {
 .faq-home-page::before {
   content: "";
   position: absolute;
-  left: -50%;
+  left: -35%;
   right: 0;
   margin: 0 auto;
-  width: 200%;
+  width: 172%;
   aspect-ratio: 1/1;
   background: rgba(0,0,0,0);
   border-radius: 50%;
-  border-top: 1.4375rem solid #004020;
-  border-bottom: 1.4375rem solid #004020;
+  border: 1.4375rem solid #004020;
+  border-bottom: 1.4375rem solid #fff;
   z-index: -1;
   pointer-events: none
 }
@@ -1403,7 +1407,7 @@ body::after {
 .swiper-button-lock {
   display: none!important
 }
-@media (min-width:76.875em) {
+@media (min-width:95.625em) {
   [class*=__container] {
     padding-left: 4.6875rem
   }
@@ -1412,9 +1416,6 @@ body::after {
   }
 }
 @media (min-width:120em) {
-  [class*=__container] {
-    max-width: 93.125rem
-  }
   .checkbox__text {
     font-size: 1.25rem
   }
@@ -1431,6 +1432,9 @@ body::after {
   }
   .button {
     padding: .9375rem
+  }
+  .title {
+    font-size: 3rem
   }
   .header__container {
     padding-top: 2.0625rem
@@ -1495,6 +1499,9 @@ body::after {
   }
   .steps-home-page__container {
     gap: 4rem
+  }
+  .steps-home-page__item h3 {
+    font-size: 1.25rem
   }
   .steps-home-page__item p {
     font-size: 1.25rem
@@ -1566,6 +1573,9 @@ body::after {
   }
   .choose-home-page__item h3 {
     font-size: 2rem
+  }
+  .choose-home-page__item ul {
+    gap: 1.0625rem
   }
   .faq-home-page {
     padding-top: 18.75rem
@@ -1642,6 +1652,18 @@ body::after {
   }
 }
 @media (max-width:62em) {
+  .title {
+    font-size: 2.25rem
+  }
+  .steps-home-page__item h3 {
+    font-size: 1.125rem
+  }
+  .steps-home-page__item p {
+    font-size: 1.125rem
+  }
+  .choose-home-page__item ul {
+    gap: .75rem
+  }
   .reviews-home-page__buttons {
     display: flex;
     align-items: center;
@@ -1697,9 +1719,6 @@ body::after {
   }
   .steps-home-page__container {
     gap: 1.875rem
-  }
-  .steps-home-page__item p {
-    font-size: .875rem
   }
   .steps-home-page__box {
     width: 7.5rem
@@ -1843,9 +1862,6 @@ body::after {
   }
 }
 @media (max-width:68.75em) {
-  [class*=__container] {
-    max-width: 83.75rem
-  }
   .menu nav ul {
     -webkit-column-gap: 1.25rem;
     -moz-column-gap: 1.25rem;
@@ -1888,7 +1904,7 @@ body::after {
     font-size: .9375rem
   }
   .faq-home-page::before {
-    top: 1.25rem
+    top: .0000000625rem
   }
 }
 @media (max-width:61.99875em) {
@@ -2067,11 +2083,15 @@ body::after {
     transform: none
   }
   .steps-home-page::before {
-    border-top: .5rem solid #004020;
+    border: .5rem solid #004020;
+    border-bottom: .5rem solid #fff;
     top: 4.0625rem
   }
   .steps-home-page__items {
     grid-template-columns: repeat(auto-fit,minmax(16.25rem,1fr))
+  }
+  .steps-home-page__item h3 {
+    font-size: 1.25rem
   }
   .steps-home-page {
     padding-top: 8.125rem
@@ -2097,9 +2117,8 @@ body::after {
     flex-direction: column
   }
   .faq-home-page::before {
-    border-top: .5rem solid #004020;
-    border-bottom: .5rem solid #004020;
-    border-bottom: none;
+    border: .5rem solid #004020;
+    border-bottom: .5rem solid #fff;
     top: 3.75rem
   }
 }
@@ -2125,7 +2144,8 @@ body::after {
     line-height: 120%
   }
   .steps-home-page__item p {
-    line-height: 140%
+    line-height: 140%;
+    font-size: .875rem
   }
   .steps-home-page__item {
     gap: 1.875rem
@@ -2212,61 +2232,12 @@ body::after {
     width: 100%
   }
 }
-@media (min-width:68.75em)and (max-width:120em) {
+@media (min-width:20em)and (max-width:95.625em) {
   [class*=__container] {
-    max-width: clamp(83.75rem ,71.1737804878rem + 18.2926829268vw ,93.125rem)
-  }
-  .menu nav ul {
-    -webkit-column-gap: clamp(1.25rem ,-.8460365854rem + 3.0487804878vw ,2.8125rem);
-    -moz-column-gap: clamp(1.25rem ,-.8460365854rem + 3.0487804878vw ,2.8125rem);
-    column-gap: clamp(1.25rem ,-.8460365854rem + 3.0487804878vw ,2.8125rem)
-  }
-  .menu nav ul li a {
-    font-size: clamp(.75rem ,.4146341463rem + .487804878vw ,1rem)
-  }
-  .button {
-    font-size: clamp(.75rem ,.4146341463rem + .487804878vw ,1rem)
-  }
-  .button {
-    padding: clamp(.625rem ,.2057926829rem + .6097560976vw ,.9375rem)
-  }
-  .hero-home-page__container {
-    padding-top: clamp(3.75rem ,-.9451219512rem + 6.8292682927vw ,7.25rem)
-  }
-  .hero-home-page__container h1 {
-    margin-bottom: clamp(1.25rem ,-1.2652439024rem + 3.6585365854vw ,3.125rem)
-  }
-  .hero-home-page__decor {
-    width: clamp(7.5rem ,1.631097561rem + 8.5365853659vw ,11.875rem)
-  }
-  .hero-home-page__decor {
-    height: clamp(8.125rem ,.7469512195rem + 10.7317073171vw ,13.625rem)
-  }
-  .hero-home-page__label {
-    max-width: clamp(14.375rem ,4.3140243902rem + 14.6341463415vw ,21.875rem)
-  }
-  .hero-home-page__label p {
-    font-size: clamp(1rem ,.3292682927rem + .9756097561vw ,1.5rem)
-  }
-  .hero-home-page__text {
-    margin-bottom: clamp(1.25rem ,-.4268292683rem + 2.4390243902vw ,2.5rem)
-  }
-  .hero-home-page__text span {
-    font-size: clamp(1rem ,.3292682927rem + .9756097561vw ,1.5rem)
-  }
-  .hero-home-page__text p {
-    font-size: clamp(.9375rem ,.5182926829rem + .6097560976vw ,1.25rem)
-  }
-  .faq-home-page::before {
-    top: clamp(1.25rem ,-7.5533536585rem + 12.8048780488vw ,7.8125rem)
-  }
-}
-@media (min-width:20em)and (max-width:76.875em) {
-  [class*=__container] {
-    padding-left: clamp(1.25rem ,.0412087912rem + 6.043956044vw ,4.6875rem)
+    padding-left: clamp(1.25rem ,.3409090909rem + 4.5454545455vw ,4.6875rem)
   }
   [class*=__container] {
-    padding-right: clamp(1.25rem ,.0412087912rem + 6.043956044vw ,4.6875rem)
+    padding-right: clamp(1.25rem ,.3409090909rem + 4.5454545455vw ,4.6875rem)
   }
 }
 @media (min-width:48em)and (max-width:120em) {
@@ -2306,9 +2277,6 @@ body::after {
   }
   .steps-home-page__container {
     gap: clamp(1.875rem ,.4583333333rem + 2.9513888889vw ,4rem)
-  }
-  .steps-home-page__item p {
-    font-size: clamp(.875rem ,.625rem + .5208333333vw ,1.25rem)
   }
   .steps-home-page__box {
     width: clamp(7.5rem ,4.7083333333rem + 5.8159722222vw ,11.6875rem)
@@ -2443,9 +2411,67 @@ body::after {
     width: clamp(2.5rem ,1.8333333333rem + 1.3888888889vw ,3.5rem)
   }
 }
+@media (min-width:68.75em)and (max-width:120em) {
+  .menu nav ul {
+    -webkit-column-gap: clamp(1.25rem ,-.8460365854rem + 3.0487804878vw ,2.8125rem);
+    -moz-column-gap: clamp(1.25rem ,-.8460365854rem + 3.0487804878vw ,2.8125rem);
+    column-gap: clamp(1.25rem ,-.8460365854rem + 3.0487804878vw ,2.8125rem)
+  }
+  .menu nav ul li a {
+    font-size: clamp(.75rem ,.4146341463rem + .487804878vw ,1rem)
+  }
+  .button {
+    font-size: clamp(.75rem ,.4146341463rem + .487804878vw ,1rem)
+  }
+  .button {
+    padding: clamp(.625rem ,.2057926829rem + .6097560976vw ,.9375rem)
+  }
+  .hero-home-page__container {
+    padding-top: clamp(3.75rem ,-.9451219512rem + 6.8292682927vw ,7.25rem)
+  }
+  .hero-home-page__container h1 {
+    margin-bottom: clamp(1.25rem ,-1.2652439024rem + 3.6585365854vw ,3.125rem)
+  }
+  .hero-home-page__decor {
+    width: clamp(7.5rem ,1.631097561rem + 8.5365853659vw ,11.875rem)
+  }
+  .hero-home-page__decor {
+    height: clamp(8.125rem ,.7469512195rem + 10.7317073171vw ,13.625rem)
+  }
+  .hero-home-page__label {
+    max-width: clamp(14.375rem ,4.3140243902rem + 14.6341463415vw ,21.875rem)
+  }
+  .hero-home-page__label p {
+    font-size: clamp(1rem ,.3292682927rem + .9756097561vw ,1.5rem)
+  }
+  .hero-home-page__text {
+    margin-bottom: clamp(1.25rem ,-.4268292683rem + 2.4390243902vw ,2.5rem)
+  }
+  .hero-home-page__text span {
+    font-size: clamp(1rem ,.3292682927rem + .9756097561vw ,1.5rem)
+  }
+  .hero-home-page__text p {
+    font-size: clamp(.9375rem ,.5182926829rem + .6097560976vw ,1.25rem)
+  }
+  .faq-home-page::before {
+    top: clamp(.0000000625rem ,-10.4801827805rem + 15.2439023171vw ,7.8125rem)
+  }
+}
 @media (min-width:62em)and (max-width:120em) {
+  .title {
+    font-size: clamp(2.25rem ,1.4482758621rem + 1.2931034483vw ,3rem)
+  }
   .header__desk {
     width: clamp(9.375rem ,6.1681034483rem + 5.1724137931vw ,12.375rem)
+  }
+  .steps-home-page__item h3 {
+    font-size: clamp(1.125rem ,.9913793103rem + .2155172414vw ,1.25rem)
+  }
+  .steps-home-page__item p {
+    font-size: clamp(1.125rem ,.9913793103rem + .2155172414vw ,1.25rem)
+  }
+  .choose-home-page__item ul {
+    gap: clamp(.75rem ,.4159482759rem + .5387931034vw ,1.0625rem)
   }
   .reviews-home-page .swiper-button-prev {
     left: clamp(-5.625rem ,-.4525862069rem + -4.3103448276vw ,-3.125rem)
