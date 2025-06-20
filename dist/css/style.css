@@ -262,7 +262,8 @@ body {
   font-weight: 600;
   font-size: 1rem;
   text-transform: uppercase;
-  white-space: nowrap
+  white-space: nowrap;
+  font-family: Gilroy-Semibold
 }
 .menu nav ul li a::before {
   content: "";
@@ -579,7 +580,8 @@ body::after {
   line-height: 137%;
   font-size: 1.5rem;
   color: #004020;
-  margin-bottom: .9375rem
+  margin-bottom: .9375rem;
+  font-family: Gilroy-Semibold
 }
 .footer__content {
   display: flex;
@@ -788,7 +790,8 @@ body::after {
   margin-bottom: .625rem;
   display: block;
   width: 100%;
-  max-width: 85%
+  max-width: 85%;
+  font-family: Gilroy-Semibold
 }
 .hero-home-page__text p {
   line-height: 165%
@@ -890,7 +893,8 @@ body::after {
 }
 .steps-home-page__item h3 {
   font-size: 1.25rem;
-  font-weight: 600
+  font-weight: 700;
+  font-family: Gilroy-Bold
 }
 .steps-home-page__box {
   border-radius: 50%;
@@ -937,7 +941,8 @@ body::after {
 }
 .additional-home-page__container h3 {
   font-weight: 700;
-  font-size: 1.25rem
+  font-size: 1.25rem;
+  font-family: Gilroy-Bold
 }
 .additional-home-page__left {
   width: 100%;
@@ -961,6 +966,7 @@ body::after {
 }
 .additional-home-page__right p {
   font-weight: 600;
+  font-family: Gilroy-Semibold;
   display: block
 }
 .additional-home-page__img {
@@ -1115,7 +1121,8 @@ body::after {
   justify-content: space-between;
   font-weight: 600;
   line-height: 162%;
-  color: #004020
+  color: #004020;
+  font-family: Gilroy-Semibold
 }
 .choose-home-page__icon {
   width: 4.8125rem;
@@ -1158,7 +1165,8 @@ body::after {
 }
 .choose-home-page__item h3 {
   margin-bottom: 1.25rem;
-  font-weight: 600
+  font-weight: 600;
+  font-family: Gilroy-Semibold
 }
 .choose-home-page__item ul {
   margin-bottom: 1.875rem;
@@ -1233,7 +1241,8 @@ body::after {
 .faq-home-page__item h3 {
   font-weight: 600;
   margin-bottom: .5rem;
-  color: #004020
+  color: #004020;
+  font-family: Gilroy-Semibold
 }
 .faq-home-page__item p {
   line-height: 120%
@@ -1243,6 +1252,7 @@ body::after {
   align-items: center;
   justify-content: space-between;
   font-weight: 600;
+  font-family: Gilroy-Semibold;
   line-height: 162%;
   border-radius: .9375rem;
   background-color: #edf2ef
