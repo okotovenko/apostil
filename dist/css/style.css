@@ -200,13 +200,12 @@ body {
   min-width: 0
 }
 [class*=__container] {
-  max-width: 93.125rem;
   margin: 0 auto
 }
 [class*="--gc"] {
   display: grid;
   min-width: 0;
-  grid-template-columns: 1.25rem 1fr minmax(auto,93.125rem) 1fr 1.25rem
+  grid-template-columns: 1.25rem 1fr minmax(auto,74.375rem) 1fr 1.25rem
 }
 [class*="--gc"]>* {
   min-width: 0;
@@ -493,12 +492,13 @@ body::after {
 .button {
   display: inline-flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+  font-size: 1rem;
+  padding: .9375rem
 }
 .button-transparent {
   border: 1px solid #004020;
   border-radius: .625rem;
-  padding: .9375rem;
   background-color: rgba(0,0,0,0);
   font-weight: 500;
   font-size: 1rem;
@@ -508,10 +508,8 @@ body::after {
 .button-fill {
   border: 1px solid #004020;
   border-radius: .625rem;
-  padding: .9375rem;
   background-color: #004020;
   font-weight: 500;
-  font-size: 1rem;
   color: #fff;
   transition: all .3s ease 0s;
   width: 12.375rem
@@ -519,7 +517,8 @@ body::after {
 .title {
   font-weight: 600;
   line-height: 146%;
-  opacity: 0
+  opacity: 0;
+  font-family: Gilroy-Semibold
 }
 .title.animation {
   -webkit-animation: top .3s .3s linear both;
@@ -694,7 +693,8 @@ body::after {
 .hero-home-page__container h1 {
   position: relative;
   z-index: 2;
-  opacity: 0
+  opacity: 0;
+  font-family: Gilroy-Semibold
 }
 .hero-home-page__container h1.animation {
   -webkit-animation: top .2s .5s linear both;
@@ -739,15 +739,14 @@ body::after {
   object-fit: contain
 }
 .hero-home-page__label {
-  background-color: #004020;
   padding: .875rem 1.75rem;
   color: #fff;
   line-height: 140%;
   width: 100%;
-  max-width: 21.875rem;
   position: relative;
-  clip-path: path("M325.646 2.69363C323.953 .970612 321.64 0 319.224 0H9C4.02945 0 0 4.02944 0 9V47C0 51.9706 4.02945 56 9 56H319.224C321.64 56 323.953 55.0294 325.646 53.3064L350.5 28L325.646 2.69363Z");
-  opacity: 0
+  opacity: 0;
+  border-radius: .625rem;
+  background: right/cover url(../img/home/label.svg) no-repeat
 }
 .hero-home-page__label.animation {
   -webkit-animation: left .2s .5s linear both;
@@ -787,7 +786,9 @@ body::after {
   font-weight: 600;
   line-height: 150%;
   margin-bottom: .625rem;
-  display: block
+  display: block;
+  width: 100%;
+  max-width: 85%
 }
 .hero-home-page__text p {
   line-height: 165%
@@ -1386,7 +1387,7 @@ body::after {
 .swiper-button-lock {
   display: none!important
 }
-@media (min-width:95.625em) {
+@media (min-width:76.875em) {
   [class*=__container] {
     padding-left: 4.6875rem
   }
@@ -1395,6 +1396,9 @@ body::after {
   }
 }
 @media (min-width:120em) {
+  [class*=__container] {
+    max-width: 93.125rem
+  }
   .checkbox__text {
     font-size: 1.25rem
   }
@@ -1402,6 +1406,15 @@ body::after {
     -webkit-column-gap: 2.8125rem;
     -moz-column-gap: 2.8125rem;
     column-gap: 2.8125rem
+  }
+  .menu nav ul li a {
+    font-size: 1rem
+  }
+  .button {
+    font-size: 1rem
+  }
+  .button {
+    padding: .9375rem
   }
   .title {
     font-size: 3rem
@@ -1448,6 +1461,9 @@ body::after {
   }
   .hero-home-page__decor {
     height: 13.625rem
+  }
+  .hero-home-page__label {
+    max-width: 21.875rem
   }
   .hero-home-page__label p {
     font-size: 1.5rem
@@ -1635,11 +1651,6 @@ body::after {
   .checkbox__text {
     font-size: .875rem
   }
-  .menu nav ul {
-    -webkit-column-gap: 1.25rem;
-    -moz-column-gap: 1.25rem;
-    column-gap: 1.25rem
-  }
   .header__container {
     padding-top: 1.3125rem
   }
@@ -1751,9 +1762,6 @@ body::after {
   .faq-home-page {
     padding-bottom: 3.4375rem
   }
-  .faq-home-page::before {
-    top: 3.75rem
-  }
   .faq-home-page__items {
     margin-bottom: 1.875rem
   }
@@ -1822,6 +1830,23 @@ body::after {
   }
 }
 @media (max-width:68.75em) {
+  [class*=__container] {
+    max-width: 83.75rem
+  }
+  .menu nav ul {
+    -webkit-column-gap: 1.25rem;
+    -moz-column-gap: 1.25rem;
+    column-gap: 1.25rem
+  }
+  .menu nav ul li a {
+    font-size: .75rem
+  }
+  .button {
+    font-size: .75rem
+  }
+  .button {
+    padding: .625rem
+  }
   .title {
     font-size: 1.5rem
   }
@@ -1829,13 +1854,16 @@ body::after {
     padding-top: 3.75rem
   }
   .hero-home-page__container h1 {
-    margin-bottom: 1.875rem
+    margin-bottom: 1.25rem
   }
   .hero-home-page__decor {
     width: 7.5rem
   }
   .hero-home-page__decor {
     height: 8.125rem
+  }
+  .hero-home-page__label {
+    max-width: 14.375rem
   }
   .hero-home-page__label p {
     font-size: 1rem
@@ -1848,6 +1876,9 @@ body::after {
   }
   .hero-home-page__text p {
     font-size: .9375rem
+  }
+  .faq-home-page::before {
+    top: 1.25rem
   }
 }
 @media (max-width:61.99875em) {
@@ -1867,7 +1898,8 @@ body::after {
   }
   .menu nav ul li a {
     width: 100%;
-    padding: .9375rem
+    padding: .9375rem;
+    font-size: 1rem
   }
   .menu nav ul li {
     width: 100%;
@@ -1929,6 +1961,10 @@ body::after {
     bottom: calc(50% - .0625rem);
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg)
+  }
+  .button {
+    font-size: 1rem;
+    padding: .9375rem
   }
   .header__logo::before {
     left: -.875rem;
@@ -2072,9 +2108,7 @@ body::after {
     height: .6875rem
   }
   .hero-home-page__label {
-    max-width: 14.375rem;
-    padding: .75rem 1.25rem;
-    clip-path: path("M208.364 2.1577C206.734 .765137 204.661 0 202.517 0H9C4.02943 0 -1.52588e-05 4.02944 -1.52588e-05 9V34C-1.52588e-05 38.9706 4.02942 43 8.99998 43H202.517C204.661 43 206.734 42.2349 208.364 40.8423L231 21.5L208.364 2.1577Z")
+    padding: .75rem 1.25rem
   }
   .hero-home-page__label p {
     line-height: 120%
@@ -2167,22 +2201,69 @@ body::after {
     width: 100%
   }
 }
-@media (min-width:20em)and (max-width:95.625em) {
+@media (min-width:68.75em)and (max-width:120em) {
   [class*=__container] {
-    padding-left: clamp(1.25rem ,.3409090909rem + 4.5454545455vw ,4.6875rem)
+    max-width: clamp(83.75rem ,71.1737804878rem + 18.2926829268vw ,93.125rem)
+  }
+  .menu nav ul {
+    -webkit-column-gap: clamp(1.25rem ,-.8460365854rem + 3.0487804878vw ,2.8125rem);
+    -moz-column-gap: clamp(1.25rem ,-.8460365854rem + 3.0487804878vw ,2.8125rem);
+    column-gap: clamp(1.25rem ,-.8460365854rem + 3.0487804878vw ,2.8125rem)
+  }
+  .menu nav ul li a {
+    font-size: clamp(.75rem ,.4146341463rem + .487804878vw ,1rem)
+  }
+  .button {
+    font-size: clamp(.75rem ,.4146341463rem + .487804878vw ,1rem)
+  }
+  .button {
+    padding: clamp(.625rem ,.2057926829rem + .6097560976vw ,.9375rem)
+  }
+  .title {
+    font-size: clamp(1.5rem ,-.512195122rem + 2.9268292683vw ,3rem)
+  }
+  .hero-home-page__container {
+    padding-top: clamp(3.75rem ,-.9451219512rem + 6.8292682927vw ,7.25rem)
+  }
+  .hero-home-page__container h1 {
+    margin-bottom: clamp(1.25rem ,-1.2652439024rem + 3.6585365854vw ,3.125rem)
+  }
+  .hero-home-page__decor {
+    width: clamp(7.5rem ,1.631097561rem + 8.5365853659vw ,11.875rem)
+  }
+  .hero-home-page__decor {
+    height: clamp(8.125rem ,.7469512195rem + 10.7317073171vw ,13.625rem)
+  }
+  .hero-home-page__label {
+    max-width: clamp(14.375rem ,4.3140243902rem + 14.6341463415vw ,21.875rem)
+  }
+  .hero-home-page__label p {
+    font-size: clamp(1rem ,.3292682927rem + .9756097561vw ,1.5rem)
+  }
+  .hero-home-page__text {
+    margin-bottom: clamp(1.25rem ,-.4268292683rem + 2.4390243902vw ,2.5rem)
+  }
+  .hero-home-page__text span {
+    font-size: clamp(1rem ,.3292682927rem + .9756097561vw ,1.5rem)
+  }
+  .hero-home-page__text p {
+    font-size: clamp(.9375rem ,.5182926829rem + .6097560976vw ,1.25rem)
+  }
+  .faq-home-page::before {
+    top: clamp(1.25rem ,-7.5533536585rem + 12.8048780488vw ,7.8125rem)
+  }
+}
+@media (min-width:20em)and (max-width:76.875em) {
+  [class*=__container] {
+    padding-left: clamp(1.25rem ,.0412087912rem + 6.043956044vw ,4.6875rem)
   }
   [class*=__container] {
-    padding-right: clamp(1.25rem ,.3409090909rem + 4.5454545455vw ,4.6875rem)
+    padding-right: clamp(1.25rem ,.0412087912rem + 6.043956044vw ,4.6875rem)
   }
 }
 @media (min-width:48em)and (max-width:120em) {
   .checkbox__text {
     font-size: clamp(.875rem ,.625rem + .5208333333vw ,1.25rem)
-  }
-  .menu nav ul {
-    -webkit-column-gap: clamp(1.25rem ,.2083333333rem + 2.1701388889vw ,2.8125rem);
-    -moz-column-gap: clamp(1.25rem ,.2083333333rem + 2.1701388889vw ,2.8125rem);
-    column-gap: clamp(1.25rem ,.2083333333rem + 2.1701388889vw ,2.8125rem)
   }
   .header__container {
     padding-top: clamp(1.3125rem ,.8125rem + 1.0416666667vw ,2.0625rem)
@@ -2295,9 +2376,6 @@ body::after {
   .faq-home-page {
     padding-bottom: clamp(3.4375rem ,2.8125rem + 1.3020833333vw ,4.375rem)
   }
-  .faq-home-page::before {
-    top: clamp(3.75rem ,1.0416666667rem + 5.6423611111vw ,7.8125rem)
-  }
   .faq-home-page__items {
     margin-bottom: clamp(1.875rem ,-.625rem + 5.2083333333vw ,5.625rem)
   }
@@ -2355,35 +2433,6 @@ body::after {
   .reviews-home-page .swiper-button-next,
   .reviews-home-page .swiper-button-prev {
     width: clamp(2.5rem ,1.8333333333rem + 1.3888888889vw ,3.5rem)
-  }
-}
-@media (min-width:68.75em)and (max-width:120em) {
-  .title {
-    font-size: clamp(1.5rem ,-.512195122rem + 2.9268292683vw ,3rem)
-  }
-  .hero-home-page__container {
-    padding-top: clamp(3.75rem ,-.9451219512rem + 6.8292682927vw ,7.25rem)
-  }
-  .hero-home-page__container h1 {
-    margin-bottom: clamp(1.875rem ,.1981707317rem + 2.4390243902vw ,3.125rem)
-  }
-  .hero-home-page__decor {
-    width: clamp(7.5rem ,1.631097561rem + 8.5365853659vw ,11.875rem)
-  }
-  .hero-home-page__decor {
-    height: clamp(8.125rem ,.7469512195rem + 10.7317073171vw ,13.625rem)
-  }
-  .hero-home-page__label p {
-    font-size: clamp(1rem ,.3292682927rem + .9756097561vw ,1.5rem)
-  }
-  .hero-home-page__text {
-    margin-bottom: clamp(1.25rem ,-.4268292683rem + 2.4390243902vw ,2.5rem)
-  }
-  .hero-home-page__text span {
-    font-size: clamp(1rem ,.3292682927rem + .9756097561vw ,1.5rem)
-  }
-  .hero-home-page__text p {
-    font-size: clamp(.9375rem ,.5182926829rem + .6097560976vw ,1.25rem)
   }
 }
 @media (min-width:62em)and (max-width:120em) {
