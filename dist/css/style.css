@@ -495,15 +495,16 @@ body::after {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
-  padding: .9375rem
+  padding-top: .9375rem;
+  padding-bottom: .9375rem;
+  padding-left: .3125rem;
+  padding-right: .3125rem
 }
 .button-transparent {
   border: 1px solid #004020;
   border-radius: .625rem;
   background-color: rgba(0,0,0,0);
   font-weight: 500;
-  font-size: 1rem;
   color: #004020;
   transition: all .3s ease 0s
 }
@@ -958,14 +959,14 @@ body::after {
   border-radius: 1.0625rem;
   background-color: #fff;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   -webkit-column-gap: 2rem;
   -moz-column-gap: 2rem;
   column-gap: 2rem;
   row-gap: .3125rem;
-  line-height: 165%;
-  color: #004020
+  line-height: 140%;
+  color: #000
 }
 .additional-home-page__right p {
   font-weight: 600;
@@ -986,6 +987,9 @@ body::after {
   width: 100%;
   -o-object-fit: contain;
   object-fit: contain
+}
+.additional-home-page__text {
+  padding-bottom: .1875rem
 }
 .choose-home-page__container {
   display: flex;
@@ -1116,7 +1120,7 @@ body::after {
 .choose-home-page__bottom {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   -webkit-column-gap: .625rem;
   -moz-column-gap: .625rem;
@@ -1125,10 +1129,10 @@ body::after {
 }
 .choose-home-page__bot {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   font-weight: 600;
-  line-height: 162%;
+  line-height: 165%;
   color: #004020;
   font-family: Gilroy-Semibold
 }
@@ -1151,6 +1155,9 @@ body::after {
   -o-object-fit: contain;
   object-fit: contain
 }
+.choose-home-page__text {
+  padding-bottom: .1875rem
+}
 .choose-home-page__buttons {
   display: flex;
   align-items: center;
@@ -1158,7 +1165,12 @@ body::after {
   -moz-column-gap: 1.5rem;
   column-gap: 1.5rem;
   row-gap: .875rem;
-  text-align: center
+  text-align: center;
+  padding-bottom: .5625rem
+}
+.choose-home-page__buttons a {
+  width: 13.6875rem;
+  white-space: nowrap
 }
 .choose-home-page__items {
   display: flex;
@@ -1260,7 +1272,7 @@ body::after {
 }
 .faq-home-page__bot {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   font-weight: 600;
   font-family: Gilroy-Semibold;
@@ -1287,6 +1299,9 @@ body::after {
   -o-object-fit: contain;
   object-fit: contain
 }
+.faq-home-page__text {
+  padding-bottom: .1875rem
+}
 .reviews-home-page {
   background-color: #edf2ef
 }
@@ -1294,6 +1309,9 @@ body::after {
   display: flex;
   flex-direction: column;
   align-items: center
+}
+.reviews-home-page__container h2 {
+  color: #004020
 }
 .reviews-home-page__box {
   position: relative;
@@ -1408,6 +1426,16 @@ body::after {
 .swiper-button-lock {
   display: none!important
 }
+@media (min-width:81.25em) {
+  .footer__info {
+    max-width: 20rem
+  }
+}
+@media (min-width:87.5em) {
+  .button {
+    font-size: 1rem
+  }
+}
 @media (min-width:95.625em) {
   [class*=__container] {
     padding-left: 4.6875rem
@@ -1427,12 +1455,6 @@ body::after {
   }
   .menu nav ul li a {
     font-size: 1rem
-  }
-  .button {
-    font-size: 1rem
-  }
-  .button {
-    padding: .9375rem
   }
   .title {
     font-size: 3rem
@@ -1659,6 +1681,9 @@ body::after {
   .title {
     font-size: 2.25rem
   }
+  .footer__info {
+    max-width: 13.75rem
+  }
   .steps-home-page__item h3 {
     font-size: 1.125rem
   }
@@ -1666,7 +1691,10 @@ body::after {
     font-size: 1.125rem
   }
   .choose-home-page__left ul li p {
-    font-size: .875rem
+    font-size: 1rem
+  }
+  .choose-home-page__bot {
+    font-size: 1rem
   }
   .choose-home-page__item ul {
     gap: .75rem
@@ -1780,9 +1808,6 @@ body::after {
   .choose-home-page__bot {
     gap: .625rem
   }
-  .choose-home-page__bot {
-    font-size: 1rem
-  }
   .choose-home-page__item {
     padding-top: 1.5rem
   }
@@ -1878,9 +1903,9 @@ body::after {
     max-width: 31.25rem
   }
   .choose-home-page__li {
-    flex: 0 0 2.8125rem;
-    width: 2.8125rem;
-    height: 2.8125rem
+    flex: 0 0 3.25rem;
+    width: 3.25rem;
+    height: 3.25rem
   }
 }
 @media (max-width:68.75em) {
@@ -1893,10 +1918,7 @@ body::after {
     font-size: .75rem
   }
   .button {
-    font-size: .75rem
-  }
-  .button {
-    padding: .625rem
+    font-size: .9375rem
   }
   .hero-home-page__container {
     padding-top: 3.75rem
@@ -2121,7 +2143,11 @@ body::after {
   .additional-home-page__right {
     flex-direction: column;
     text-align: center;
-    margin: 0
+    margin: 0;
+    align-items: center
+  }
+  .additional-home-page__text {
+    padding: 0
   }
   .choose-home-page__container h2 {
     margin: 0;
@@ -2136,7 +2162,17 @@ body::after {
     margin-bottom: 2.5rem
   }
   .choose-home-page__bottom {
-    flex-direction: column
+    flex-direction: column;
+    align-items: center
+  }
+  .choose-home-page__bot {
+    align-items: center
+  }
+  .choose-home-page__text {
+    padding: 0
+  }
+  .choose-home-page__buttons {
+    padding: 0
   }
   .faq-home-page::before {
     border: .5rem solid #004020;
@@ -2248,7 +2284,11 @@ body::after {
   .faq-home-page__bot {
     flex-direction: column;
     width: 100%;
-    text-align: center
+    text-align: center;
+    align-items: center
+  }
+  .faq-home-page__text {
+    padding: 0
   }
   .reviews-home-page__slide {
     max-width: 100%
@@ -2358,9 +2398,6 @@ body::after {
   .choose-home-page__bot {
     gap: clamp(.625rem ,-.2083333333rem + 1.7361111111vw ,1.875rem)
   }
-  .choose-home-page__bot {
-    font-size: clamp(1rem ,.8333333333rem + .3472222222vw ,1.25rem)
-  }
   .choose-home-page__item {
     padding-top: clamp(1.5rem ,.25rem + 2.6041666667vw ,3.375rem)
   }
@@ -2447,12 +2484,6 @@ body::after {
   .menu nav ul li a {
     font-size: clamp(.75rem ,.4146341463rem + .487804878vw ,1rem)
   }
-  .button {
-    font-size: clamp(.75rem ,.4146341463rem + .487804878vw ,1rem)
-  }
-  .button {
-    padding: clamp(.625rem ,.2057926829rem + .6097560976vw ,.9375rem)
-  }
   .hero-home-page__container {
     padding-top: clamp(3.75rem ,-.9451219512rem + 6.8292682927vw ,7.25rem)
   }
@@ -2484,6 +2515,11 @@ body::after {
     top: clamp(.0000000625rem ,-10.4801827805rem + 15.2439023171vw ,7.8125rem)
   }
 }
+@media (min-width:68.75em)and (max-width:87.5em) {
+  .button {
+    font-size: clamp(.9375rem ,.7083333333rem + .3333333333vw ,1rem)
+  }
+}
 @media (min-width:62em)and (max-width:120em) {
   .title {
     font-size: clamp(2.25rem ,1.4482758621rem + 1.2931034483vw ,3rem)
@@ -2498,7 +2534,13 @@ body::after {
     font-size: clamp(1.125rem ,.9913793103rem + .2155172414vw ,1.25rem)
   }
   .choose-home-page__left ul li p {
-    font-size: clamp(.875rem ,.474137931rem + .6465517241vw ,1.25rem)
+    font-size: clamp(1rem ,.7327586207rem + .4310344828vw ,1.25rem)
+  }
+  .choose-home-page__bot {
+    font-size: clamp(1rem ,.7327586207rem + .4310344828vw ,1.25rem)
+  }
+  .choose-home-page__buttons a {
+    width: clamp(10.625rem ,7.3512931034rem + 5.2801724138vw ,13.6875rem)
   }
   .choose-home-page__item ul {
     gap: clamp(.75rem ,.4159482759rem + .5387931034vw ,1.0625rem)
@@ -2508,6 +2550,11 @@ body::after {
   }
   .reviews-home-page .swiper-button-next {
     right: clamp(-5.625rem ,-.4525862069rem + -4.3103448276vw ,-3.125rem)
+  }
+}
+@media (min-width:62em)and (max-width:81.25em) {
+  .footer__info {
+    max-width: clamp(13.75rem ,-6.3798701299rem + 32.4675324675vw ,20rem)
   }
 }
 @media (any-hover:hover) {
