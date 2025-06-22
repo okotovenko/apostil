@@ -396,7 +396,7 @@ body::after {
   display: none
 }
 .tabs__img {
-  min-width: 5rem;
+  min-width: 6.25rem;
   aspect-ratio: 366/747;
   max-width: 22.875rem
 }
