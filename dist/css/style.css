@@ -803,7 +803,7 @@ body::after {
   position: absolute;
   left: -5rem;
   top: -1.5625rem;
-  z-index: 1;
+  z-index: -1;
   pointer-events: none
 }
 .hero-home-page__decor>img,
@@ -2170,6 +2170,10 @@ body::after {
     width: 20px;
     height: 20px
   }
+  .steps-home-page::before {
+    border: .9375rem solid #004020;
+    border-bottom: .9375rem solid #fff
+  }
   .choose-home-page__left {
     max-width: 31.25rem
   }
@@ -2177,6 +2181,14 @@ body::after {
     flex: 0 0 3.25rem;
     width: 3.25rem;
     height: 3.25rem
+  }
+  .faq-home-page::before {
+    border: .9375rem solid #004020;
+    border-bottom: .9375rem solid #fff
+  }
+  .second-how-page::before {
+    border: .9375rem solid #004020;
+    border-bottom: .9375rem solid #fff
   }
 }
 @media (max-width:68.75em) {
@@ -2239,7 +2251,7 @@ body::after {
     top: .0000000625rem
   }
   .hero-how-page {
-    padding-top: .75rem
+    padding-top: 5rem
   }
   .hero-how-page__container .hero-home-page__box {
     margin-bottom: 3.125rem
@@ -2248,7 +2260,7 @@ body::after {
     font-size: 1.125rem
   }
   .second-how-page {
-    padding-top: 10.9375rem
+    padding-top: 12.5rem
   }
   .second-how-page {
     padding-bottom: 2.1875rem
@@ -2958,7 +2970,7 @@ body::after {
     top: clamp(.0000000625rem ,-10.4801827805rem + 15.2439023171vw ,7.8125rem)
   }
   .hero-how-page {
-    padding-top: clamp(.75rem ,-6.2926829268rem + 10.243902439vw ,6rem)
+    padding-top: clamp(5rem ,3.6585365854rem + 1.9512195122vw ,6rem)
   }
   .hero-how-page__container .hero-home-page__box {
     margin-bottom: clamp(3.125rem ,.6097560976rem + 3.6585365854vw ,5rem)
@@ -2967,7 +2979,7 @@ body::after {
     font-size: clamp(1.125rem ,.6219512195rem + .7317073171vw ,1.5rem)
   }
   .second-how-page {
-    padding-top: clamp(10.9375rem ,2.1341463415rem + 12.8048780488vw ,17.5rem)
+    padding-top: clamp(12.5rem ,5.7926829268rem + 9.756097561vw ,17.5rem)
   }
   .second-how-page {
     padding-bottom: clamp(2.1875rem ,-3.262195122rem + 7.9268292683vw ,6.25rem)
