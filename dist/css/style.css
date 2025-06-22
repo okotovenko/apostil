@@ -1564,6 +1564,7 @@ body::after {
   right: 0;
   top: 0;
   width: 150%;
+  width: 75rem;
   height: 100%;
   border-top-left-radius: 15.3125rem;
   border-bottom-left-radius: 15.3125rem;
@@ -2190,6 +2191,10 @@ body::after {
     border: .9375rem solid #004020;
     border-bottom: .9375rem solid #fff
   }
+  .second-how-page__img::before {
+    width: 43.75rem;
+    width: 130%
+  }
 }
 @media (max-width:68.75em) {
   .menu nav ul {
@@ -2712,6 +2717,9 @@ body::after {
   }
   .second-how-page__row {
     flex-direction: column
+  }
+  .second-how-page__img::before {
+    width: 120%
   }
   .second-how-page__img {
     width: 100%
