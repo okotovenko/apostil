@@ -2168,7 +2168,7 @@ body::after {
 @media (max-width:93.75em) {
   .second-how-page__img::before {
     width: 43.75rem;
-    width: 110%
+    width: 120%
   }
 }
 @media (max-width:81.25em) {
@@ -2719,9 +2719,6 @@ body::after {
   }
   .second-how-page__row {
     flex-direction: column
-  }
-  .second-how-page__img::before {
-    width: 120%
   }
   .second-how-page__img {
     width: 100%
