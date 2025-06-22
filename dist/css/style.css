@@ -342,6 +342,77 @@ body::after {
 .lock .popup__content {
   visibility: visible
 }
+.tabs {
+  display: flex;
+  row-gap: 2.5rem;
+  padding-left: 10%
+}
+.tabs__navigation {
+  width: 100%;
+  max-width: 36.875rem;
+  display: flex;
+  flex-direction: column;
+  padding-top: .9375rem
+}
+.tabs__navigation>div {
+  display: flex;
+  gap: .9375rem
+}
+.tabs__navigation>div span {
+  flex: 0 0 .3125rem;
+  display: block;
+  width: .3125rem;
+  height: 1.625rem;
+  background: #d9d9d9
+}
+.tabs__navigation>div._tab-active span {
+  height: 100%;
+  background: #004020;
+  width: 5px
+}
+.tabs__navigation>div._tab-active p {
+  display: block
+}
+.tabs__navigation>div._tab-active button {
+  color: #004020
+}
+.tabs__title {
+  font-family: Gilroy-Semibold;
+  position: relative;
+  font-weight: 600;
+  color: #666;
+  text-align: left
+}
+.tabs__title p {
+  display: block;
+  margin-top: .625rem;
+  font-weight: 400;
+  line-height: 165%;
+  color: #000;
+  font-family: Gilroy-Regular;
+  display: none
+}
+.tabs__body .tabs__title {
+  display: none
+}
+.tabs__img {
+  aspect-ratio: 366/747;
+  max-width: 22.875rem
+}
+.tabs__img>img,
+.tabs__img>picture {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain
+}
+.tabs__img picture img,
+.tabs__img picture source {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain
+}
 .ibg {
   width: 100%;
   height: 100%;
@@ -576,6 +647,10 @@ body::after {
 }
 .header__mob {
   display: none
+}
+.footer {
+  z-index: 2;
+  border-top: .1875rem solid #edf2ef
 }
 .footer__container h2 {
   font-weight: 600;
@@ -1400,6 +1475,132 @@ body::after {
 .reviews-home-page .swiper-button-disabled {
   opacity: .2
 }
+.hero-how-page__container a {
+  margin-top: .625rem
+}
+.hero-how-page__container .hero-home-page__box>p {
+  font-weight: 600;
+  font-family: Gilroy-Semibold;
+  opacity: 0
+}
+.hero-how-page__container .hero-home-page__box>p.animation {
+  -webkit-animation: left .4s .5s linear both;
+  animation: left .4s .5s linear both
+}
+.second-how-page {
+  position: relative
+}
+.second-how-page::before {
+  content: "";
+  position: absolute;
+  left: -35%;
+  right: 0;
+  margin: 0 auto;
+  width: 172%;
+  aspect-ratio: 1/1;
+  background: rgba(0,0,0,0);
+  border-radius: 50%;
+  border: 1.4375rem solid #004020;
+  border-bottom: 1.4375rem solid #fff;
+  z-index: 1;
+  pointer-events: none
+}
+.second-how-page__container {
+  display: flex;
+  flex-direction: column
+}
+.second-how-page__container :nth-child(odd).second-how-page__row {
+  flex-direction: row-reverse
+}
+.second-how-page__container :nth-child(odd).second-how-page__row .second-how-page__img {
+  -webkit-transform: translateX(-30px);
+  transform: translateX(-30px)
+}
+.second-how-page__container :nth-child(odd).second-how-page__row .second-how-page__img::before {
+  left: 0
+}
+.second-how-page__container :nth-child(even).second-how-page__row {
+  z-index: 2
+}
+.second-how-page__container :nth-child(even).second-how-page__row .second-how-page__img::before {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg)
+}
+.second-how-page__row {
+  width: 100%;
+  display: flex;
+  align-items: center
+}
+.second-how-page__row h2 {
+  line-height: 120%;
+  margin-bottom: 1.25rem
+}
+.second-how-page__row h2.animation {
+  -webkit-animation: top .2s .5s linear both;
+  animation: top .2s .5s linear both
+}
+.second-how-page__row p {
+  opacity: 0;
+  font-weight: 400;
+  line-height: 157%
+}
+.second-how-page__row p:not(:last-child) {
+  margin-bottom: 1.25rem
+}
+.second-how-page__row p.animation {
+  -webkit-animation: left .4s .5s linear both;
+  animation: left .4s .5s linear both
+}
+.second-how-page__img {
+  width: 53%;
+  max-width: 42.8125rem;
+  aspect-ratio: 685/490;
+  position: relative
+}
+.second-how-page__img::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 150%;
+  height: 100%;
+  border-top-left-radius: 15.3125rem;
+  border-bottom-left-radius: 15.3125rem;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(270deg,rgba(221,221,221,0) 0,rgba(119,119,119,.38) 100%)
+}
+.second-how-page__img>img,
+.second-how-page__img>picture {
+  width: 100%;
+  height: 100%;
+  border-radius: 15.3125rem;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.second-how-page__img picture img,
+.second-how-page__img picture source {
+  width: 100%;
+  height: 100%;
+  border-radius: 15.3125rem;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.second-how-page__text {
+  width: 47%
+}
+.second-how-page__label {
+  z-index: 2;
+  width: 100%;
+  border: .125rem solid #004020;
+  border-radius: 1.0625rem;
+  font-family: Gilroy-LightItalic;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 158%;
+  text-align: center;
+  padding: 1.0625rem 2.0625rem
+}
 .swiper {
   overflow: hidden
 }
@@ -1459,6 +1660,23 @@ body::after {
   }
   .menu nav ul li a {
     font-size: 1rem
+  }
+  .tabs {
+    -webkit-column-gap: 6.875rem;
+    -moz-column-gap: 6.875rem;
+    column-gap: 6.875rem
+  }
+  .tabs__navigation {
+    gap: 2.5rem
+  }
+  .tabs__title {
+    font-size: 1.5rem
+  }
+  .tabs__title p {
+    font-size: 1.25rem
+  }
+  .tabs__img {
+    max-width: 22.875rem
   }
   .title {
     font-size: 3rem
@@ -1680,8 +1898,44 @@ body::after {
   .reviews-home-page .swiper-button-next {
     right: -5.625rem
   }
+  .hero-how-page {
+    padding-top: 6rem
+  }
+  .hero-how-page__container .hero-home-page__box {
+    margin-bottom: 5rem
+  }
+  .hero-how-page__container .hero-home-page__box>p {
+    font-size: 1.5rem
+  }
+  .second-how-page {
+    padding-top: 17.5rem
+  }
+  .second-how-page {
+    padding-bottom: 6.25rem
+  }
+  .second-how-page::before {
+    top: 6.25rem
+  }
+  .second-how-page__container {
+    gap: 9.375rem
+  }
+  .second-how-page__container :nth-child(odd).second-how-page__row {
+    gap: 6.25rem
+  }
+  .second-how-page__row {
+    gap: 6.25rem
+  }
+  .second-how-page__row p {
+    font-size: 1.25rem
+  }
+  .second-how-page__label {
+    font-size: 1.5rem
+  }
 }
 @media (max-width:62em) {
+  .tabs__img {
+    max-width: 17.5rem
+  }
   .title {
     font-size: 2.25rem
   }
@@ -1888,6 +2142,18 @@ body::after {
   .reviews-home-page .swiper-button-prev {
     width: 2.5rem
   }
+  .second-how-page__container {
+    gap: 2.8125rem
+  }
+  .second-how-page__container :nth-child(odd).second-how-page__row {
+    gap: 2.5rem
+  }
+  .second-how-page__row {
+    gap: 1.25rem
+  }
+  .second-how-page__row p {
+    font-size: .875rem
+  }
 }
 @media (max-width:20em) {
   [class*=__container] {
@@ -1921,6 +2187,23 @@ body::after {
   .menu nav ul li a {
     font-size: .75rem
   }
+  .tabs {
+    -webkit-column-gap: 3.75rem;
+    -moz-column-gap: 3.75rem;
+    column-gap: 3.75rem
+  }
+  .tabs__navigation {
+    gap: 1.875rem
+  }
+  .tabs__title {
+    font-size: 1.125rem
+  }
+  .tabs__title p {
+    font-size: 1rem
+  }
+  .tabs__content {
+    align-self: center
+  }
   .button {
     font-size: .9375rem
   }
@@ -1953,6 +2236,27 @@ body::after {
   }
   .faq-home-page::before {
     top: .0000000625rem
+  }
+  .hero-how-page {
+    padding-top: .75rem
+  }
+  .hero-how-page__container .hero-home-page__box {
+    margin-bottom: 3.125rem
+  }
+  .hero-how-page__container .hero-home-page__box>p {
+    font-size: 1.125rem
+  }
+  .second-how-page {
+    padding-top: 10.9375rem
+  }
+  .second-how-page {
+    padding-bottom: 2.1875rem
+  }
+  .second-how-page::before {
+    top: 3.75rem
+  }
+  .second-how-page__label {
+    font-size: 1rem
   }
 }
 @media (max-width:61.99875em) {
@@ -2035,6 +2339,53 @@ body::after {
     bottom: calc(50% - .0625rem);
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg)
+  }
+  .tabs__navigation {
+    display: none
+  }
+  .tabs__title p {
+    font-size: 1rem;
+    line-height: 150%
+  }
+  .tabs__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%
+  }
+  .tabs__content .tabs__body:last-of-type {
+    border: none
+  }
+  .tabs__body {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    border-bottom: 1.5px solid #e7e8de;
+    padding: 1.5625rem 0;
+    gap: 2.8125rem;
+    height: auto
+  }
+  .tabs__body .tabs__title {
+    display: block;
+    width: 100%;
+    font-size: 1.25rem;
+    color: #000
+  }
+  .tabs__body .tabs__title p {
+    display: block
+  }
+  .tabs__img>img,
+  .tabs__img>picture {
+    width: auto
+  }
+  .tabs__img picture img,
+  .tabs__img picture source {
+    width: auto
+  }
+  .tabs {
+    padding-left: 0
   }
   .button {
     font-size: 1rem;
@@ -2183,10 +2534,28 @@ body::after {
     border-bottom: .5rem solid #fff;
     top: 3.75rem
   }
+  .second-how-page::before {
+    border: .5rem solid #004020;
+    border-bottom: .5rem solid #fff;
+    top: 3.75rem
+  }
 }
 @media (max-width:61.99875em)and (any-hover:none) {
   .icon-menu {
     cursor: default
+  }
+}
+@media (max-width:61.99875em)and (max-width:20em) {
+  .tabs__body {
+    gap: 1.25rem
+  }
+  .tabs__img>img,
+  .tabs__img>picture {
+    max-width: 5rem
+  }
+  .tabs__img picture img,
+  .tabs__img picture source {
+    max-width: 5rem
   }
 }
 @media (max-width:47.99875em) {
@@ -2194,6 +2563,9 @@ body::after {
     flex: 0 0 25px;
     width: 25px;
     height: 25px
+  }
+  .tabs__title {
+    font-size: 1rem
   }
   .title {
     text-align: center;
@@ -2299,6 +2671,43 @@ body::after {
   }
   .reviews-home-page__slide {
     max-width: 100%
+  }
+  .hero-how-page__container h1 {
+    margin-bottom: .9375rem
+  }
+  .hero-how-page__container a {
+    width: 100%;
+    margin-top: .625rem
+  }
+  .hero-how-page__container .hero-home-page__box>p {
+    text-align: center;
+    font-size: .9375rem
+  }
+  .hero-how-page__container .hero-home-page__box {
+    margin-bottom: 1.25rem
+  }
+  .second-how-page__container :nth-child(odd).second-how-page__row {
+    flex-direction: column;
+    gap: 1.25rem
+  }
+  .second-how-page__container :nth-child(odd).second-how-page__row .second-how-page__img {
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
+  .second-how-page__row h2 {
+    text-align: left
+  }
+  .second-how-page__row {
+    flex-direction: column
+  }
+  .second-how-page__img {
+    width: 100%
+  }
+  .second-how-page__text {
+    width: 100%
+  }
+  .second-how-page {
+    padding-top: 7.8125rem
   }
 }
 @media (max-width:22.5em) {
@@ -2481,6 +2890,18 @@ body::after {
   .reviews-home-page .swiper-button-prev {
     width: clamp(2.5rem ,1.8333333333rem + 1.3888888889vw ,3.5rem)
   }
+  .second-how-page__container {
+    gap: clamp(2.8125rem ,-1.5625rem + 9.1145833333vw ,9.375rem)
+  }
+  .second-how-page__container :nth-child(odd).second-how-page__row {
+    gap: clamp(2.5rem ,.0000000625rem + 5.2083333333vw ,6.25rem)
+  }
+  .second-how-page__row {
+    gap: clamp(1.25rem ,-2.0833333333rem + 6.9444444444vw ,6.25rem)
+  }
+  .second-how-page__row p {
+    font-size: clamp(.875rem ,.625rem + .5208333333vw ,1.25rem)
+  }
 }
 @media (min-width:68.75em)and (max-width:120em) {
   .menu nav ul {
@@ -2490,6 +2911,20 @@ body::after {
   }
   .menu nav ul li a {
     font-size: clamp(.75rem ,.4146341463rem + .487804878vw ,1rem)
+  }
+  .tabs {
+    -webkit-column-gap: clamp(3.75rem ,-.4420731707rem + 6.0975609756vw ,6.875rem);
+    -moz-column-gap: clamp(3.75rem ,-.4420731707rem + 6.0975609756vw ,6.875rem);
+    column-gap: clamp(3.75rem ,-.4420731707rem + 6.0975609756vw ,6.875rem)
+  }
+  .tabs__navigation {
+    gap: clamp(1.875rem ,1.0365853659rem + 1.2195121951vw ,2.5rem)
+  }
+  .tabs__title {
+    font-size: clamp(1.125rem ,.6219512195rem + .7317073171vw ,1.5rem)
+  }
+  .tabs__title p {
+    font-size: clamp(1rem ,.6646341463rem + .487804878vw ,1.25rem)
   }
   .hero-home-page__container {
     padding-top: clamp(3.75rem ,-.9451219512rem + 6.8292682927vw ,7.25rem)
@@ -2521,13 +2956,58 @@ body::after {
   .faq-home-page::before {
     top: clamp(.0000000625rem ,-10.4801827805rem + 15.2439023171vw ,7.8125rem)
   }
+  .hero-how-page {
+    padding-top: clamp(.75rem ,-6.2926829268rem + 10.243902439vw ,6rem)
+  }
+  .hero-how-page__container .hero-home-page__box {
+    margin-bottom: clamp(3.125rem ,.6097560976rem + 3.6585365854vw ,5rem)
+  }
+  .hero-how-page__container .hero-home-page__box>p {
+    font-size: clamp(1.125rem ,.6219512195rem + .7317073171vw ,1.5rem)
+  }
+  .second-how-page {
+    padding-top: clamp(10.9375rem ,2.1341463415rem + 12.8048780488vw ,17.5rem)
+  }
+  .second-how-page {
+    padding-bottom: clamp(2.1875rem ,-3.262195122rem + 7.9268292683vw ,6.25rem)
+  }
+  .second-how-page::before {
+    top: clamp(3.75rem ,.3963414634rem + 4.8780487805vw ,6.25rem)
+  }
+  .second-how-page__label {
+    font-size: clamp(1rem ,.3292682927rem + .9756097561vw ,1.5rem)
+  }
 }
-@media (min-width:68.75em)and (max-width:87.5em) {
-  .button {
-    font-size: clamp(.9375rem ,.7083333333rem + .3333333333vw ,1rem)
+@media (max-width:61.99875em)and (min-width:62em) {
+  .tabs__body {
+    gap: 2.8125rem
+  }
+  .tabs__img>img,
+  .tabs__img>picture {
+    max-width: 13.4375rem
+  }
+  .tabs__img picture img,
+  .tabs__img picture source {
+    max-width: 13.4375rem
+  }
+}
+@media (max-width:61.99875em)and (min-width:20em)and (max-width:62em) {
+  .tabs__body {
+    gap: clamp(1.25rem ,.505952381rem + 3.7202380952vw ,2.8125rem)
+  }
+  .tabs__img>img,
+  .tabs__img>picture {
+    max-width: clamp(5rem ,.9821428571rem + 20.0892857143vw ,13.4375rem)
+  }
+  .tabs__img picture img,
+  .tabs__img picture source {
+    max-width: clamp(5rem ,.9821428571rem + 20.0892857143vw ,13.4375rem)
   }
 }
 @media (min-width:62em)and (max-width:120em) {
+  .tabs__img {
+    max-width: clamp(17.5rem ,11.7543103448rem + 9.2672413793vw ,22.875rem)
+  }
   .title {
     font-size: clamp(2.25rem ,1.4482758621rem + 1.2931034483vw ,3rem)
   }
@@ -2557,6 +3037,11 @@ body::after {
   }
   .reviews-home-page .swiper-button-next {
     right: clamp(-5.625rem ,-.4525862069rem + -4.3103448276vw ,-3.125rem)
+  }
+}
+@media (min-width:68.75em)and (max-width:87.5em) {
+  .button {
+    font-size: clamp(.9375rem ,.7083333333rem + .3333333333vw ,1rem)
   }
 }
 @media (min-width:62em)and (max-width:81.25em) {
