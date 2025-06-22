@@ -2428,6 +2428,9 @@ body::after {
   .second-about-page__container {
     grid-template-columns: .9fr 1.1fr
   }
+  .second-about-page__left>p {
+    max-width: 85%
+  }
 }
 @media (max-width:68.75em) {
   .menu nav ul {
