@@ -2187,6 +2187,9 @@ body::after {
   .hero-about-page__left>p {
     font-size: 1rem
   }
+  .second-about-page__left>p {
+    font-size: 1rem
+  }
   .second-about-page__right ul li p {
     font-size: 1rem
   }
@@ -2520,9 +2523,6 @@ body::after {
   }
   .second-about-page__container {
     grid-template-columns: 1fr 1fr
-  }
-  .second-about-page__left>p {
-    font-size: .875rem
   }
 }
 @media (max-width:61.99875em) {
@@ -2874,6 +2874,9 @@ body::after {
   .additional-home-page__left {
     text-align: center
   }
+  .choose-home-page__left ul li p {
+    font-size: .875rem
+  }
   .choose-home-page__img::before {
     display: none
   }
@@ -3020,7 +3023,11 @@ body::after {
   .second-about-page__left>p {
     margin: 0;
     max-width: 100%;
-    margin-bottom: 1.25rem
+    margin-bottom: 1.25rem;
+    font-size: .875rem
+  }
+  .second-about-page__right ul li p {
+    font-size: .875rem
   }
   .second-about-page__right ul {
     margin-bottom: 2.1875rem
@@ -3322,9 +3329,6 @@ body::after {
   .second-about-page__container {
     padding-bottom: clamp(3.125rem ,-2.324695122rem + 7.9268292683vw ,7.1875rem)
   }
-  .second-about-page__left>p {
-    font-size: clamp(.875rem ,.3719512195rem + .7317073171vw ,1.25rem)
-  }
 }
 @media (max-width:61.99875em)and (min-width:62em) {
   .tabs__body {
@@ -3387,6 +3391,9 @@ body::after {
     right: clamp(-5.625rem ,-.4525862069rem + -4.3103448276vw ,-3.125rem)
   }
   .hero-about-page__left>p {
+    font-size: clamp(1rem ,.7327586207rem + .4310344828vw ,1.25rem)
+  }
+  .second-about-page__left>p {
     font-size: clamp(1rem ,.7327586207rem + .4310344828vw ,1.25rem)
   }
   .second-about-page__right ul li p {
