@@ -1563,7 +1563,7 @@ body::after {
   position: absolute;
   right: 0;
   top: 0;
-  width: 150%;
+  width: 130%;
   width: 75rem;
   height: 100%;
   border-top-left-radius: 15.3125rem;
@@ -2165,6 +2165,12 @@ body::after {
     padding-right: 1.25rem
   }
 }
+@media (max-width:93.75em) {
+  .second-how-page__img::before {
+    width: 43.75rem;
+    width: 110%
+  }
+}
 @media (max-width:81.25em) {
   .checkbox__label:before {
     flex: 0 0 20px;
@@ -2190,10 +2196,6 @@ body::after {
   .second-how-page::before {
     border: .9375rem solid #004020;
     border-bottom: .9375rem solid #fff
-  }
-  .second-how-page__img::before {
-    width: 43.75rem;
-    width: 130%
   }
 }
 @media (max-width:68.75em) {
