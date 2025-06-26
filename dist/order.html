@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250626182410">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250626231056">
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="apple-touch-icon" hrefimg/icon.webp">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -324,7 +324,7 @@
 									</label>
 									<label class="form-label">
 										<span>Document type *</span>
-										<select data-scroll data-required autocomplete="off" data-error="Error" name="document-type" data-class-modif="form">
+										<select multiple data-scroll data-required autocomplete="off" data-error="Error" name="document-type" data-class-modif="form">
 											<option value="">select</option>
 											<optgroup label="Personal Documents">
 												<option data-sub="1310" value="Adoption Document">Adoption Document</option>
@@ -594,12 +594,68 @@
 											<input type="text" data-required name="adress-1" id="adress-1" autocomplete="off" maxlength="255" data-error="Error" placeholder="Home Address *" class="input">
 										</label>
 										<label class="form-label">
-											<input type="text" name="apartment-1" id="apartment-1" autocomplete="off" maxlength="255" placeholder="Suite or Apartment #" class="input">
+											<input type="text" name="city-1" id="city-1" autocomplete="off" maxlength="255" placeholder="City *" class="input">
 										</label>
 									</div>
 									<div class="form-label-row">
 										<label class="form-label">
-											<input type="text" data-required name="state-1" id="state-1" autocomplete="off" maxlength="255" data-error="Error" placeholder="State, Province, or District *" class="input">
+											<select data-scroll data-simplebar data-required autocomplete="off" data-error="Error" name="state-1" id="state-1" data-class-modif="form">
+												<option value="">Select *</option>
+												<option value="Alabama">Alabama</option>
+												<option value="Alaska">Alaska</option>
+												<option value="Arizona">Arizona</option>
+												<option value="Arkansas">Arkansas</option>
+												<option value="California">California</option>
+												<option value="Colorado">Colorado</option>
+												<option value="Connecticut">Connecticut</option>
+												<option value="Delaware">Delaware</option>
+												<option value="District of Columbia">District of Columbia</option>
+												<option value="Florida">Florida</option>
+												<option value="Georgia">Georgia</option>
+												<option value="Guam">Guam</option>
+												<option value="Hawaii">Hawaii</option>
+												<option value="Idaho">Idaho</option>
+												<option value="Illinois">Illinois</option>
+												<option value="Indiana">Indiana</option>
+												<option value="Iowa">Iowa</option>
+												<option value="Kansas">Kansas</option>
+												<option value="Kentucky">Kentucky</option>
+												<option value="Louisiana">Louisiana</option>
+												<option value="Maine">Maine</option>
+												<option value="Maryland">Maryland</option>
+												<option value="Massachusetts">Massachusetts</option>
+												<option value="Michigan">Michigan</option>
+												<option value="Minnesota">Minnesota</option>
+												<option value="Mississippi">Mississippi</option>
+												<option value="Missouri">Missouri</option>
+												<option value="Montana">Montana</option>
+												<option value="Nebraska">Nebraska</option>
+												<option value="Nevada">Nevada</option>
+												<option value="New Hampshire">New Hampshire</option>
+												<option value="New Jersey">New Jersey</option>
+												<option value="New Mexico">New Mexico</option>
+												<option value="New York">New York</option>
+												<option value="North Carolina">North Carolina</option>
+												<option value="North Dakota">North Dakota</option>
+												<option value="Ohio">Ohio</option>
+												<option value="Oklahoma">Oklahoma</option>
+												<option value="Oregon">Oregon</option>
+												<option value="Pennsylvania">Pennsylvania</option>
+												<option value="Puerto Rico">Puerto Rico</option>
+												<option value="Rhode Island">Rhode Island</option>
+												<option value="South Carolina">South Carolina</option>
+												<option value="South Dakota">South Dakota</option>
+												<option value="Tennessee">Tennessee</option>
+												<option value="Texas">Texas</option>
+												<option value="U.S. Virgin Islands">U.S. Virgin Islands</option>
+												<option value="Vermont">Vermont</option>
+												<option value="Virginia">Virginia</option>
+												<option value="Washington">Washington</option>
+												<option value="West Virginia">West Virginia</option>
+												<option value="Wisconsin">Wisconsin</option>
+												<option value="Wyoming">Wyoming</option>
+												<option value="Utah">&ZeroWidthSpace;Utah</option>
+											</select>
 										</label>
 										<label class="form-label">
 											<input type="text" data-required name="zip-1" id="zip-1" autocomplete="off" maxlength="255" data-error="Error" placeholder="Zip or Postal Code *" class="input">
@@ -616,7 +672,7 @@
 								</div>
 								<div class="form__right">
 									<div class="form__top">
-										<p>If is shipping address different from the address provided?</p>
+										<p>Is the return shipping address different from the address provided?</p>
 										<div class="options">
 											<div class="options__item">
 												<input id="o_1" class="options__input" checked type="radio" value="No" name="option">
@@ -641,12 +697,68 @@
 											<input type="text" data-required name="adress-2" id="adress-2" autocomplete="off" maxlength="255" data-error="Error" placeholder="Home Address *" class="input">
 										</label>
 										<label class="form-label">
-											<input type="text" name="apartment-2" id="apartment-2" autocomplete="off" maxlength="255" placeholder="Suite or Apartment #" class="input">
+											<input type="text" name="city-2" id="city-2" autocomplete="off" maxlength="255" placeholder="City *" class="input">
 										</label>
 									</div>
 									<div class="form-label-row">
 										<label class="form-label">
-											<input type="text" data-required name="state-2" id="state-2" autocomplete="off" maxlength="255" data-error="Error" placeholder="State, Province, or District *" class="input">
+											<select data-scroll data-simplebar data-required autocomplete="off" data-error="Error" name="state-2" id="state-2" data-class-modif="form">
+												<option value="">Select *</option>
+												<option value="Alabama">Alabama</option>
+												<option value="Alaska">Alaska</option>
+												<option value="Arizona">Arizona</option>
+												<option value="Arkansas">Arkansas</option>
+												<option value="California">California</option>
+												<option value="Colorado">Colorado</option>
+												<option value="Connecticut">Connecticut</option>
+												<option value="Delaware">Delaware</option>
+												<option value="District of Columbia">District of Columbia</option>
+												<option value="Florida">Florida</option>
+												<option value="Georgia">Georgia</option>
+												<option value="Guam">Guam</option>
+												<option value="Hawaii">Hawaii</option>
+												<option value="Idaho">Idaho</option>
+												<option value="Illinois">Illinois</option>
+												<option value="Indiana">Indiana</option>
+												<option value="Iowa">Iowa</option>
+												<option value="Kansas">Kansas</option>
+												<option value="Kentucky">Kentucky</option>
+												<option value="Louisiana">Louisiana</option>
+												<option value="Maine">Maine</option>
+												<option value="Maryland">Maryland</option>
+												<option value="Massachusetts">Massachusetts</option>
+												<option value="Michigan">Michigan</option>
+												<option value="Minnesota">Minnesota</option>
+												<option value="Mississippi">Mississippi</option>
+												<option value="Missouri">Missouri</option>
+												<option value="Montana">Montana</option>
+												<option value="Nebraska">Nebraska</option>
+												<option value="Nevada">Nevada</option>
+												<option value="New Hampshire">New Hampshire</option>
+												<option value="New Jersey">New Jersey</option>
+												<option value="New Mexico">New Mexico</option>
+												<option value="New York">New York</option>
+												<option value="North Carolina">North Carolina</option>
+												<option value="North Dakota">North Dakota</option>
+												<option value="Ohio">Ohio</option>
+												<option value="Oklahoma">Oklahoma</option>
+												<option value="Oregon">Oregon</option>
+												<option value="Pennsylvania">Pennsylvania</option>
+												<option value="Puerto Rico">Puerto Rico</option>
+												<option value="Rhode Island">Rhode Island</option>
+												<option value="South Carolina">South Carolina</option>
+												<option value="South Dakota">South Dakota</option>
+												<option value="Tennessee">Tennessee</option>
+												<option value="Texas">Texas</option>
+												<option value="U.S. Virgin Islands">U.S. Virgin Islands</option>
+												<option value="Vermont">Vermont</option>
+												<option value="Virginia">Virginia</option>
+												<option value="Washington">Washington</option>
+												<option value="West Virginia">West Virginia</option>
+												<option value="Wisconsin">Wisconsin</option>
+												<option value="Wyoming">Wyoming</option>
+												<option value="Utah">&ZeroWidthSpace;Utah</option>
+											</select>
 										</label>
 										<label class="form-label">
 											<input type="text" data-required name="zip-2" id="zip-2" autocomplete="off" maxlength="255" data-error="Error" placeholder="Zip or Postal Code *" class="input">
@@ -686,7 +798,13 @@
 							</div>
 							<span class="_icon-trash"></span>
 						</div>
-						<div class="order__list"></div>
+						<div class="order__list">
+							<div class="order-group" data-group="notarization"></div>
+							<div class="order-group" data-group="processing"></div>
+							<div class="order-group" data-group="translation"></div>
+							<div class="order-group" data-group="apostille"></div>
+							<div class="order-group" data-group="delivery"></div>
+						</div>
 						<div class="order__bottom">
 							<h3>Subtotal </h3>
 							<h3 id="order-subtotal">$0.00</h3>
@@ -790,7 +908,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20250626182410"></script>
+	<script src="js/app.min.js?_v=20250626231056"></script>
 </body>
 
 </html>

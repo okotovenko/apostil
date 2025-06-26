@@ -5535,18 +5535,24 @@
         const radioNo = document.getElementById("o_2");
         if (radioNo) document.addEventListener("DOMContentLoaded", (function() {
             const radioYes = document.getElementById("o_1");
-            const fieldPairs = [ [ "name-1", "name-2" ], [ "soname-1", "soname-2" ], [ "adress-1", "adress-2" ], [ "apartment-1", "apartment-2" ], [ "state-1", "state-2" ], [ "zip-1", "zip-2" ], [ "tel-1", "tel-2" ], [ "email-1", "email-2" ] ];
+            const fieldPairs = [ [ "name-1", "name-2" ], [ "soname-1", "soname-2" ], [ "adress-1", "adress-2" ], [ "city-1", "city-2" ], [ "state-1", "state-2" ], [ "zip-1", "zip-2" ] ];
             function copyValues() {
                 fieldPairs.forEach((([fromId, toId]) => {
                     const from = document.getElementById(fromId);
                     const to = document.getElementById(toId);
-                    if (from && to) to.value = from.value;
+                    if (from && to) if (from.tagName === "SELECT" && to.tagName === "SELECT") {
+                        to.value = from.value;
+                        to.dispatchEvent(new Event("change"));
+                    } else to.value = from.value;
                 }));
             }
             function clearValues() {
                 fieldPairs.forEach((([_, toId]) => {
                     const to = document.getElementById(toId);
-                    if (to) to.value = "";
+                    if (to) if (to.tagName === "SELECT") {
+                        to.value = "";
+                        to.dispatchEvent(new Event("change"));
+                    } else to.value = "";
                 }));
             }
             if (radioNo.checked) copyValues();
@@ -5604,19 +5610,35 @@
             "Courier services-5": 50
         };
         const translationPricePerPage = 35;
+        const groupMap = {
+            Notarization: "notarization",
+            Apostile: "apostille",
+            "processing-time": "processing",
+            translation: "translation",
+            delivery: "delivery",
+            courier: "delivery"
+        };
         const orderList = document.querySelector(".order__list");
         const orderTotal = document.getElementById("order-total");
         const orderSubtotal = document.getElementById("order-subtotal");
         const orderTax = document.getElementById("order-tax");
         const serviceTypeSelect = document.querySelector('.select[data-id="4"]');
         const processingSelect = document.querySelector('.select[data-id="5"]');
-        const deliverySelect = document.querySelector('.select[data-id="8"]');
-        const courierSelect = document.querySelector('.select[data-id="9"]');
+        const deliverySelect = document.querySelector('.select[data-id="10"]');
+        const courierSelect = document.querySelector('.select[data-id="11"]');
         const translationInput = document.getElementById("add-translation");
         const translationBtn = document.getElementById("add-translation-btn");
         if (!orderList || !orderSubtotal || !orderTax || !orderTotal) {
             console.error("❌ Контейнеры для калькулятора не найдены");
             return;
+        }
+        function appendRowToGroup(row, type, label) {
+            let groupKey = "";
+            if (type === "service-type") {
+                if (label.includes("Notarization")) groupKey = "notarization"; else if (label.includes("Apostile")) groupKey = "apostille";
+            } else groupKey = groupMap[type];
+            const container = document.querySelector(`.order-group[data-group="${groupKey}"]`);
+            if (container) container.appendChild(row); else orderList.appendChild(row);
         }
         function formatPrice(price) {
             return `$${(Math.round(price * 100) / 100).toFixed(2)}`;
@@ -5646,6 +5668,8 @@
                     updateServiceTypeSelectHeader();
                 }
             }
+            if (type === "delivery") unlockSelect(courierSelect);
+            if (type === "courier") unlockSelect(deliverySelect);
             row.remove();
             updateTotal();
         }
@@ -5665,7 +5689,7 @@
             row.setAttribute("data-id", serviceId);
             row.innerHTML = `\n\t\t\t<div class="order__data">\n\t\t\t\t<p>${label}</p>\n\t\t\t\t<h3>${formatPrice(price)}</h3>\n\t\t\t</div>\n\t\t\t<div class="order__icons">\n\t\t\t\t<span class="pen _icon-pen" style="cursor:pointer"></span>\n\t\t\t\t<span class="trash _icon-trash" style="cursor:pointer"></span>\n\t\t\t</div>\n\t\t`;
             row.querySelector("._icon-trash").addEventListener("click", (() => removeRow(row)));
-            orderList.appendChild(row);
+            appendRowToGroup(row, type, label);
             updateTotal();
         }
         if (processingSelect) {
@@ -5697,6 +5721,7 @@
                         type: "delivery",
                         price
                     });
+                    lockSelect(courierSelect);
                 }));
             }));
         }
@@ -5713,6 +5738,7 @@
                         type: "courier",
                         price
                     });
+                    lockSelect(deliverySelect);
                 }));
             }));
         }
@@ -5761,7 +5787,7 @@
                 row.setAttribute("data-id", serviceId);
                 row.innerHTML = `\n\t\t\t\t<div class="order__data">\n\t\t\t\t\t<p>${label}</p>\n\t\t\t\t\t<h3>${formatPrice(price)}</h3>\n\t\t\t\t</div>\n\t\t\t\t<div class="order__icons">\n\t\t\t\t\t<span class="pen _icon-pen" style="cursor:pointer"></span>\n\t\t\t\t\t<span class="trash _icon-trash" style="cursor:pointer"></span>\n\t\t\t\t</div>\n\t\t\t`;
                 row.querySelector("._icon-trash").addEventListener("click", (() => removeRow(row)));
-                orderList.appendChild(row);
+                appendRowToGroup(row, type, label);
                 row.querySelector("._icon-pen").addEventListener("click", (() => {
                     const type = row.getAttribute("data-type");
                     focusField(type);
@@ -5778,6 +5804,7 @@
             }
             const totalPrice = count * translationPricePerPage;
             const translationId = "translation";
+            const type = "translation";
             const existing = orderList.querySelector(`[data-id="${translationId}"]`);
             const label = `Translations (${count} page${count > 1 ? "s" : ""})`;
             if (existing) {
@@ -5786,21 +5813,34 @@
             } else {
                 const row = document.createElement("div");
                 row.className = "order__row";
-                row.setAttribute("data-type", "translation");
+                row.setAttribute("data-type", type);
                 row.setAttribute("data-id", translationId);
                 row.innerHTML = `\n\t\t\t\t\t<div class="order__data">\n\t\t\t\t\t\t<p>${label}</p>\n\t\t\t\t\t\t<h3>${formatPrice(totalPrice)}</h3>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="order__icons">\n\t\t\t\t\t\t<span class="pen _icon-pen" style="cursor:pointer"></span>\n\t\t\t\t\t\t<span class="trash _icon-trash" style="cursor:pointer"></span>\n\t\t\t\t\t</div>\n\t\t\t\t`;
                 row.querySelector("._icon-trash").addEventListener("click", (function() {
                     removeRow(row);
                     translationInput.value = 0;
                 }));
-                orderList.appendChild(row);
+                appendRowToGroup(row, type, label);
                 row.querySelector("._icon-pen").addEventListener("click", (() => {
-                    const type = row.getAttribute("data-type");
                     focusField(type);
                 }));
             }
             updateTotal();
         }));
+        function lockSelect(select) {
+            if (!select) return;
+            select.classList.add("select--disabled");
+            select.querySelectorAll(".select__option").forEach((opt => {
+                opt.setAttribute("disabled", "disabled");
+            }));
+        }
+        function unlockSelect(select) {
+            if (!select) return;
+            select.classList.remove("select--disabled");
+            select.querySelectorAll(".select__option").forEach((opt => {
+                opt.removeAttribute("disabled");
+            }));
+        }
         function highlightField(element) {
             if (!element) return;
             element.classList.add("highlight");
