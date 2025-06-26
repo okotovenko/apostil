@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250624143550">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250626182410">
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="apple-touch-icon" hrefimg/icon.webp">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,7 +39,7 @@
 						</ul>
 					</nav>
 				</div>
-				<a href="order.html" class="header__desk button button-transparent" data-da=".menu__list, 991.98, 6">Order Now</a>
+				<a href="order.html" class="header__desk button button-fill" data-da=".menu__list, 991.98, 6">Order Now</a>
 				<a href="#" class="header__mob _icon-phone"></a>
 			</div>
 		</header>
@@ -77,7 +77,7 @@
 								<div class="form__left">
 									<label class="form-label">
 										<span>Country where the documents are going to be used? *</span>
-										<select data-required autocomplete="off" data-error="Error" name="country" data-class-modif="form">
+										<select data-scroll data-required autocomplete="off" data-error="Error" name="country" data-class-modif="form">
 											<option value="">select</option>
 											<option value="Abkhazia">Abkhazia (*NOT a member of Hague Treaty Convention)</option>
 											<option value="Afghanistan">Afghanistan (*NOT a member of Hague Treaty Convention)
@@ -324,7 +324,7 @@
 									</label>
 									<label class="form-label">
 										<span>Document type *</span>
-										<select data-required autocomplete="off" data-error="Error" name="document-type" data-class-modif="form" onchange="calculate(this)">
+										<select data-scroll data-required autocomplete="off" data-error="Error" name="document-type" data-class-modif="form">
 											<option value="">select</option>
 											<optgroup label="Personal Documents">
 												<option data-sub="1310" value="Adoption Document">Adoption Document</option>
@@ -409,68 +409,17 @@
 								</div>
 								<div class="form__right">
 									<label class="form-label">
-										<span>State *</span>
-										<select data-required autocomplete="off" data-error="Error" name="state" data-class-modif="form" onchange="calculate(this)">
+										<span>Service type *</span>
+										<select multiple data-scroll data-required autocomplete="off" data-error="Error" name="service-type" data-class-modif="form">
 											<option value="">select</option>
-											<option value="Alabama">Alabama</option>
-											<option value="Alaska">Alaska</option>
-											<option value="Arizona">Arizona</option>
-											<option value="Arkansas">Arkansas</option>
-											<option value="California">California</option>
-											<option value="Colorado">Colorado</option>
-											<option value="Connecticut">Connecticut</option>
-											<option value="Delaware">Delaware</option>
-											<option value="District of Columbia">District of Columbia</option>
-											<option value="Florida">Florida</option>
-											<option value="Georgia">Georgia</option>
-											<option value="Guam">Guam</option>
-											<option value="Hawaii">Hawaii</option>
-											<option value="Idaho">Idaho</option>
-											<option value="Illinois">Illinois</option>
-											<option value="Indiana">Indiana</option>
-											<option value="Iowa">Iowa</option>
-											<option value="Kansas">Kansas</option>
-											<option value="Kentucky">Kentucky</option>
-											<option value="Louisiana">Louisiana</option>
-											<option value="Maine">Maine</option>
-											<option value="Maryland">Maryland</option>
-											<option value="Massachusetts">Massachusetts</option>
-											<option value="Michigan">Michigan</option>
-											<option value="Minnesota">Minnesota</option>
-											<option value="Mississippi">Mississippi</option>
-											<option value="Missouri">Missouri</option>
-											<option value="Montana">Montana</option>
-											<option value="Nebraska">Nebraska</option>
-											<option value="Nevada">Nevada</option>
-											<option value="New Hampshire">New Hampshire</option>
-											<option value="New Jersey">New Jersey</option>
-											<option value="New Mexico">New Mexico</option>
-											<option value="New York">New York</option>
-											<option value="North Carolina">North Carolina</option>
-											<option value="North Dakota">North Dakota</option>
-											<option value="Ohio">Ohio</option>
-											<option value="Oklahoma">Oklahoma</option>
-											<option value="Oregon">Oregon</option>
-											<option value="Pennsylvania">Pennsylvania</option>
-											<option value="Puerto Rico">Puerto Rico</option>
-											<option value="Rhode Island">Rhode Island</option>
-											<option value="South Carolina">South Carolina</option>
-											<option value="South Dakota">South Dakota</option>
-											<option value="Tennessee">Tennessee</option>
-											<option value="Texas">Texas</option>
-											<option value="U.S. Virgin Islands">U.S. Virgin Islands</option>
-											<option value="Vermont">Vermont</option>
-											<option value="Virginia">Virginia</option>
-											<option value="Washington">Washington</option>
-											<option value="West Virginia">West Virginia</option>
-											<option value="Wisconsin">Wisconsin</option>
-											<option value="Wyoming">Wyoming</option>
-											<option value="Utah">&ZeroWidthSpace;Utah</option>
+											<option value="Notarization">Notarization</option>
+											<option value="Apostile">Apostile</option>
+											<option value="Translation">Translation of documents</option>
 										</select>
 									</label>
 									<label class="form-label">
 										<span>Processing Time *</span>
-										<select data-required autocomplete="off" data-error="Error" name="processing-time" id="processing-time" data-class-modif="form">
+										<select data-simplebar data-required autocomplete="off" data-error="Error" name="processing-time" id="processing-time" data-class-modif="form">
 											<option value="">select</option>
 											<option value="Standard">48 hrs</option>
 											<option value="Fast">Same Day</option>
@@ -483,7 +432,7 @@
 											to:
 										</h4>
 										<div class="form-label-row">
-											<select name="translate-from" data-class-modif="form">
+											<select data-scroll name="translate-from" data-class-modif="form">
 												<option value="">select</option>
 												<option value="Afrikaans">Afrikaans </option>
 												<option value="Arabic">Arabic </option>
@@ -548,7 +497,7 @@
 												<option value="Uzbek">Uzbek </option>
 												<option value="Vietnamese">Vietnamese</option>
 											</select>
-											<select name="translate-to" data-class-modif="form">
+											<select data-scroll name="translate-to" data-class-modif="form">
 												<option value="">select</option>
 												<option value="Afrikaans">Afrikaans </option>
 												<option value="Arabic">Arabic </option>
@@ -614,10 +563,16 @@
 												<option value="Vietnamese">Vietnamese</option>
 											</select>
 										</div>
+									</label>
+									<label class="form-label">
 										<b>Price will be changed after reviewing your request of translation and estimated price
 											for
 											translation will be provided to you separately
 										</b>
+										<div class="form-label-row">
+											<input type="number" min="1" data-required name="add-translation" id="add-translation" autocomplete="off" maxlength="255" data-error="Error" placeholder="Number of pages" class="input">
+											<button id="add-translation-btn" class="button button-fill">Add translation</button>
+										</div>
 									</label>
 								</div>
 							</div>
@@ -699,10 +654,22 @@
 									</div>
 									<div class="form-label-row">
 										<label class="form-label">
-											<input type="tel" data-required name="tel-2" id="tel-2" autocomplete="off" maxlength="255" data-error="Error" placeholder="Phone Number *" class="input">
+											<select data-scroll name="delivery" data-required data-error="Error" data-class-modif="form">
+												<option value="">Delivery</option>
+												<option value="Delivery-1">Delivery-1</option>
+												<option value="Delivery-2">Delivery-2</option>
+												<option value="Delivery-3">Delivery-3</option>
+												<option value="Delivery-4">Delivery-4</option>
+											</select>
 										</label>
 										<label class="form-label">
-											<input type="email" data-required name="email-2" id="email-2" autocomplete="off" maxlength="255" data-error="Error" placeholder="Email *" class="input">
+											<select data-scroll name="courier-services" data-required data-error="Error" data-class-modif="form">
+												<option value="">Courier services</option>
+												<option value="Courier services-1">Courier services-1</option>
+												<option value="Courier services-2">Courier services-2</option>
+												<option value="Courier services-3">Courier services-3</option>
+												<option value="Courier services-4">Courier services-4</option>
+											</select>
 										</label>
 									</div>
 								</div>
@@ -713,27 +680,20 @@
 					<div class="order form__box">
 						<h2>Order</h2>
 						<div class="order__top">
-							<div>
+							<div class="order__data">
 								<h3>Item</h3>
 								<h3>Cost</h3>
 							</div>
 							<span class="_icon-trash"></span>
 						</div>
-						<div class="order__list">
-							<!-- <div class="order__row">
-								<div>
-									<p>NYC Courier Delivery</p>
-									<h3>$100.00</h3>
-								</div>
-								<span class="_icon-trash"></span>
-							</div>
-							<div class="order__row">
-								<div>
-									<p>NYC Courier Delivery</p>
-									<h3>$100.00</h3>
-								</div>
-								<span class="_icon-trash"></span>
-							</div> -->
+						<div class="order__list"></div>
+						<div class="order__bottom">
+							<h3>Subtotal </h3>
+							<h3 id="order-subtotal">$0.00</h3>
+						</div>
+						<div class="order__bottom">
+							<h3>NY State Tax(8.875%)</h3>
+							<h3 id="order-tax">$0.00</h3>
 						</div>
 						<div class="order__bottom">
 							<h3>Total </h3>
@@ -830,7 +790,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20250624143550"></script>
+	<script src="js/app.min.js?_v=20250626182410"></script>
 </body>
 
 </html>
