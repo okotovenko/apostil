@@ -5622,10 +5622,10 @@
         const orderTotal = document.getElementById("order-total");
         const orderSubtotal = document.getElementById("order-subtotal");
         const orderTax = document.getElementById("order-tax");
-        const serviceTypeSelect = document.querySelector('.select[data-id="4"]');
-        const processingSelect = document.querySelector('.select[data-id="5"]');
-        const deliverySelect = document.querySelector('.select[data-id="10"]');
-        const courierSelect = document.querySelector('.select[data-id="11"]');
+        const serviceTypeSelect = document.querySelector('.select[data-id="3"]');
+        const processingSelect = document.querySelector('.select[data-id="4"]');
+        const deliverySelect = document.querySelector('.select[data-id="9"]');
+        const courierSelect = document.querySelector('.select[data-id="10"]');
         const translationInput = document.getElementById("add-translation");
         const translationBtn = document.getElementById("add-translation-btn");
         if (!orderList || !orderSubtotal || !orderTax || !orderTotal) {
