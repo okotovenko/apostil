@@ -615,6 +615,7 @@ textarea.input {
   height: 100%
 }
 .select__options {
+  width: 100%;
   color: #000;
   position: absolute;
   top: calc(100% - .0625rem);
