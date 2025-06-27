@@ -337,7 +337,7 @@ body {
 .form-upload-area {
   border: .0625rem dashed #004020;
   border-radius: .625rem;
-  padding: .9375rem .875rem;
+  padding: 2.125rem .875rem;
   width: 100%;
   display: flex;
   gap: .625rem;
@@ -2330,8 +2330,7 @@ body::after {
 }
 .additional-prices-page {
   background-color: #004020;
-  color: #fff;
-  padding-bottom: 3.375rem
+  color: #fff
 }
 .additional-prices-page>p {
   font-family: Gilroy-Bold;
@@ -3227,6 +3226,9 @@ body::after {
   .second-prices-page__item p {
     font-size: 1.25rem
   }
+  .additional-prices-page {
+    padding-bottom: 2.1875rem
+  }
   .additional-prices-page>p {
     font-size: 1.25rem
   }
@@ -3605,6 +3607,9 @@ body::after {
   .hero-about-page__frame picture img,
   .hero-about-page__frame picture source {
     width: 4.75rem
+  }
+  .additional-prices-page {
+    padding-bottom: 1.5625rem
   }
   .additional-prices-page__container {
     padding-top: 1.5625rem
@@ -4206,6 +4211,9 @@ body::after {
   }
   .form__top {
     align-items: flex-start
+  }
+  .form-upload-area {
+    padding: .9375rem .875rem
   }
   .form {
     padding-top: 0
@@ -4995,6 +5003,9 @@ body::after {
   .hero-about-page__frame picture img,
   .hero-about-page__frame picture source {
     width: clamp(4.75rem ,1.4166666667rem + 6.9444444444vw ,9.75rem)
+  }
+  .additional-prices-page {
+    padding-bottom: clamp(1.5625rem ,1.1458333333rem + .8680555556vw ,2.1875rem)
   }
   .additional-prices-page__container {
     padding-top: clamp(1.5625rem ,1.1458333333rem + .8680555556vw ,2.1875rem)

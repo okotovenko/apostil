@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250627123421">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250627154339">
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="apple-touch-icon" hrefimg/icon.webp">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -398,15 +398,21 @@
 												shipping</option>
 										</select>
 									</label> -->
-									<div class="form-upload-area _icon-upload" id="uploadArea">
-										<div class="load-file">
-											<p id="uploadMessage">Drag & drop files or </p>
-											<span class="browse-button">Browse</span>
+									<label class="form-label">
+										<h4>If you need a translation, please provide the languages you need the translation from
+											and to:
+										</h4>
+										<div class="form-upload-area _icon-upload" id="uploadArea">
+											<div class="load-file">
+												<p id="uploadMessage">Drag & drop files or </p>
+												<span class="browse-button">Browse</span>
+											</div>
+											<input type="file" id="fileInput" multiple hidden>
+											<div id="fileList"></div>
+											<span>Supported formates: JPEG, PNG, GIF, MP4, PDF, PSD, AI, Word, PPT</span>
 										</div>
-										<input type="file" id="fileInput" multiple hidden>
-										<div id="fileList"></div>
-										<span>Supported formates: JPEG, PNG, GIF, MP4, PDF, PSD, AI, Word, PPT</span>
-									</div>
+									</label>
+
 								</div>
 								<div class="form__right">
 									<label class="form-label">
@@ -593,15 +599,13 @@
 										<label class="form-label">
 											<input type="text" name="company-name-1" id="company-name-1" autocomplete="off" maxlength="255" placeholder="Company Name " class="input">
 										</label>
-										<label class="form-label">
-										</label>
 									</div>
 									<div class="form-label-row">
 										<label class="form-label">
 											<input type="text" data-required name="adress-1" id="adress-1" autocomplete="off" maxlength="255" data-error="Error" placeholder="Address *" class="input">
 										</label>
 										<label class="form-label">
-											<input type="text" name="city-1" id="city-1" autocomplete="off" maxlength="255" placeholder="City *" class="input">
+											<input type="text" data-required name="city-1" id="city-1" autocomplete="off" maxlength="255" data-error="Error" placeholder="City *" class="input">
 										</label>
 									</div>
 									<div class="form-label-row">
@@ -679,7 +683,7 @@
 								</div>
 								<div class="form__right">
 									<div class="form__top">
-										<p>Is the return shipping address different from the address provided?</p>
+										<p>Is the return shipping address different from the provided?</p>
 										<div class="options">
 											<div class="options__item">
 												<input id="o_1" class="options__input" checked type="radio" value="No" name="option">
@@ -703,15 +707,13 @@
 										<label class="form-label">
 											<input type="text" name="company-name-2" id="company-name-2" autocomplete="off" maxlength="255" placeholder="Company Name " class="input">
 										</label>
-										<label class="form-label">
-										</label>
 									</div>
 									<div class="form-label-row">
 										<label class="form-label">
 											<input type="text" data-required name="adress-2" id="adress-2" autocomplete="off" maxlength="255" data-error="Error" placeholder="Address *" class="input">
 										</label>
 										<label class="form-label">
-											<input type="text" name="city-2" id="city-2" autocomplete="off" maxlength="255" placeholder="City *" class="input">
+											<input type="text" data-required name="city-2" id="city-2" autocomplete="off" maxlength="255" data-error="Error" placeholder="City *" class="input">
 										</label>
 									</div>
 									<div class="form-label-row">
@@ -924,7 +926,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20250627123421"></script>
+	<script src="js/app.min.js?_v=20250627154339"></script>
 </body>
 
 </html>
