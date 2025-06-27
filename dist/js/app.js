@@ -5535,7 +5535,7 @@
         const radioNo = document.getElementById("o_2");
         if (radioNo) document.addEventListener("DOMContentLoaded", (function() {
             const radioYes = document.getElementById("o_1");
-            const fieldPairs = [ [ "name-1", "name-2" ], [ "soname-1", "soname-2" ], [ "adress-1", "adress-2" ], [ "city-1", "city-2" ], [ "state-1", "state-2" ], [ "zip-1", "zip-2" ] ];
+            const fieldPairs = [ [ "name-1", "name-2" ], [ "soname-1", "soname-2" ], [ "adress-1", "adress-2" ], [ "company-name-1", "company-name-2" ], [ "city-1", "city-2" ], [ "state-1", "state-2" ], [ "zip-1", "zip-2" ] ];
             function copyValues() {
                 fieldPairs.forEach((([fromId, toId]) => {
                     const from = document.getElementById(fromId);

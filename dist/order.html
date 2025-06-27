@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250626231056">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250627102054">
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="apple-touch-icon" hrefimg/icon.webp">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -388,15 +388,16 @@
 											</optgroup>
 										</select>
 									</label>
-									<label class="form-label">
+									<!-- <label class="form-label">
 										<h4>Scan and email copies (optional). This service must be ordered when you placing your
 											order</h4>
-										<select data-required autocomplete="off" data-error="Error" name="scan" data-class-modif="form">
+										<select data-required autocomplete="off" data-error="Error" name="scan"
+											data-class-modif="form">
 											<option value="scan free" selected>Scan Apostille page free</option>
 											<option value="scan not free">Email scan of the completed document before return
 												shipping</option>
 										</select>
-									</label>
+									</label> -->
 									<div class="form-upload-area _icon-upload" id="uploadArea">
 										<div class="load-file">
 											<p id="uploadMessage">Drag & drop files or </p>
@@ -414,12 +415,11 @@
 											<option value="">select</option>
 											<option value="Notarization">Notarization</option>
 											<option value="Apostile">Apostile</option>
-											<option value="Translation">Translation of documents</option>
 										</select>
 									</label>
 									<label class="form-label">
 										<span>Processing Time *</span>
-										<select data-simplebar data-required autocomplete="off" data-error="Error" name="processing-time" id="processing-time" data-class-modif="form">
+										<select data-required autocomplete="off" data-error="Error" name="processing-time" id="processing-time" data-class-modif="form">
 											<option value="">select</option>
 											<option value="Standard">48 hrs</option>
 											<option value="Fast">Same Day</option>
@@ -591,7 +591,14 @@
 									</div>
 									<div class="form-label-row">
 										<label class="form-label">
-											<input type="text" data-required name="adress-1" id="adress-1" autocomplete="off" maxlength="255" data-error="Error" placeholder="Home Address *" class="input">
+											<input type="text" name="company-name-1" id="company-name-1" autocomplete="off" maxlength="255" placeholder="Company Name " class="input">
+										</label>
+										<label class="form-label">
+										</label>
+									</div>
+									<div class="form-label-row">
+										<label class="form-label">
+											<input type="text" data-required name="adress-1" id="adress-1" autocomplete="off" maxlength="255" data-error="Error" placeholder="Address *" class="input">
 										</label>
 										<label class="form-label">
 											<input type="text" name="city-1" id="city-1" autocomplete="off" maxlength="255" placeholder="City *" class="input">
@@ -600,7 +607,7 @@
 									<div class="form-label-row">
 										<label class="form-label">
 											<select data-scroll data-simplebar data-required autocomplete="off" data-error="Error" name="state-1" id="state-1" data-class-modif="form">
-												<option value="">Select *</option>
+												<option value="">State *</option>
 												<option value="Alabama">Alabama</option>
 												<option value="Alaska">Alaska</option>
 												<option value="Arizona">Arizona</option>
@@ -654,7 +661,7 @@
 												<option value="West Virginia">West Virginia</option>
 												<option value="Wisconsin">Wisconsin</option>
 												<option value="Wyoming">Wyoming</option>
-												<option value="Utah">&ZeroWidthSpace;Utah</option>
+												<option value="Utah">Utah</option>
 											</select>
 										</label>
 										<label class="form-label">
@@ -694,7 +701,14 @@
 									</div>
 									<div class="form-label-row">
 										<label class="form-label">
-											<input type="text" data-required name="adress-2" id="adress-2" autocomplete="off" maxlength="255" data-error="Error" placeholder="Home Address *" class="input">
+											<input type="text" name="company-name-2" id="company-name-2" autocomplete="off" maxlength="255" placeholder="Company Name " class="input">
+										</label>
+										<label class="form-label">
+										</label>
+									</div>
+									<div class="form-label-row">
+										<label class="form-label">
+											<input type="text" data-required name="adress-2" id="adress-2" autocomplete="off" maxlength="255" data-error="Error" placeholder="Address *" class="input">
 										</label>
 										<label class="form-label">
 											<input type="text" name="city-2" id="city-2" autocomplete="off" maxlength="255" placeholder="City *" class="input">
@@ -703,7 +717,7 @@
 									<div class="form-label-row">
 										<label class="form-label">
 											<select data-scroll data-simplebar data-required autocomplete="off" data-error="Error" name="state-2" id="state-2" data-class-modif="form">
-												<option value="">Select *</option>
+												<option value="">State *</option>
 												<option value="Alabama">Alabama</option>
 												<option value="Alaska">Alaska</option>
 												<option value="Arizona">Arizona</option>
@@ -757,7 +771,7 @@
 												<option value="West Virginia">West Virginia</option>
 												<option value="Wisconsin">Wisconsin</option>
 												<option value="Wyoming">Wyoming</option>
-												<option value="Utah">&ZeroWidthSpace;Utah</option>
+												<option value="Utah">Utah</option>
 											</select>
 										</label>
 										<label class="form-label">
@@ -818,10 +832,12 @@
 							<h3 id="order-total">$0.00</h3>
 						</div>
 						<div class="order__agree">
-							<div class="checkbox">
+							<div class="checkbox agree">
 								<input id="c_11" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="agree">
-								<label for="c_11" class="checkbox__label"><span class="checkbox__text">I agree to the Terms and
-										Conditions</span></label>
+								<label for="c_11" class="checkbox__label"><span class="checkbox__text">I agree to
+										the</span></label>
+								<a href="terms-of-use.html">Terms and
+									Conditions</a>
 							</div>
 						</div>
 						<a href="#" class="button button-fill">Pay Now</a>
@@ -908,7 +924,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20250626231056"></script>
+	<script src="js/app.min.js?_v=20250627102054"></script>
 </body>
 
 </html>

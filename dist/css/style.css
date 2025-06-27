@@ -487,6 +487,17 @@ textarea.input {
 .checkbox__text {
   align-self: center
 }
+.checkbox.agree {
+  display: flex;
+  align-items: center;
+  gap: .625rem
+}
+.checkbox.agree a {
+  font-weight: 400;
+  line-height: 165%;
+  text-decoration: underline;
+  transition: all .3s ease 0s
+}
 .options {
   display: flex;
   align-items: center;
@@ -2844,6 +2855,9 @@ body::after {
   .checkbox__text {
     font-size: 1.25rem
   }
+  .checkbox.agree a {
+    font-size: 1.25rem
+  }
   .options__text {
     font-size: 1.25rem
   }
@@ -3297,6 +3311,9 @@ body::after {
     font-size: 1rem
   }
   .input[placeholder]:not([data-placeholder-nohiden])::placeholder {
+    font-size: 1rem
+  }
+  .checkbox.agree a {
     font-size: 1rem
   }
   .options__text {
@@ -4201,6 +4218,9 @@ body::after {
     width: 25px;
     height: 25px
   }
+  .checkbox.agree a {
+    font-size: .875rem
+  }
   .options__text {
     font-size: .875rem
   }
@@ -4533,6 +4553,9 @@ body::after {
     font-size: clamp(1rem ,.7327586207rem + .4310344828vw ,1.25rem)
   }
   .input[placeholder]:not([data-placeholder-nohiden])::placeholder {
+    font-size: clamp(1rem ,.7327586207rem + .4310344828vw ,1.25rem)
+  }
+  .checkbox.agree a {
     font-size: clamp(1rem ,.7327586207rem + .4310344828vw ,1.25rem)
   }
   .options__text {
@@ -5049,6 +5072,10 @@ body::after {
   }
   .form-upload-area div span:hover {
     cursor: pointer
+  }
+  .checkbox.agree a:hover {
+    text-decoration: none;
+    transition: all .3s ease 0s
   }
   .select__option:hover {
     background: rgba(0,64,32,.25);
