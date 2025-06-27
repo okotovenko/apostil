@@ -5600,14 +5600,12 @@
             "Delivery-2": 20,
             "Delivery-3": 30,
             "Delivery-4": 40,
-            "Delivery-5": 50
-        };
-        const courierPrices = {
-            "Courier services-1": 10,
-            "Courier services-2": 20,
-            "Courier services-3": 30,
-            "Courier services-4": 40,
-            "Courier services-5": 50
+            "Delivery-5": 50,
+            "Courier services-1": 100,
+            "Courier services-2": 200,
+            "Courier services-3": 300,
+            "Courier services-4": 400,
+            "Courier services-5": 500
         };
         const translationPricePerPage = 35;
         const groupMap = {
@@ -5615,8 +5613,7 @@
             Apostile: "apostille",
             "processing-time": "processing",
             translation: "translation",
-            delivery: "delivery",
-            courier: "delivery"
+            delivery: "delivery"
         };
         const orderList = document.querySelector(".order__list");
         const orderTotal = document.getElementById("order-total");
@@ -5625,7 +5622,6 @@
         const serviceTypeSelect = document.querySelector('.select[data-id="3"]');
         const processingSelect = document.querySelector('.select[data-id="4"]');
         const deliverySelect = document.querySelector('.select[data-id="9"]');
-        const courierSelect = document.querySelector('.select[data-id="10"]');
         const translationInput = document.getElementById("add-translation");
         const translationBtn = document.getElementById("add-translation-btn");
         if (!orderList || !orderSubtotal || !orderTax || !orderTotal) {
@@ -5668,8 +5664,6 @@
                     updateServiceTypeSelectHeader();
                 }
             }
-            if (type === "delivery") unlockSelect(courierSelect);
-            if (type === "courier") unlockSelect(deliverySelect);
             row.remove();
             updateTotal();
         }
@@ -5708,40 +5702,20 @@
                 }));
             }));
         }
-        if (deliverySelect) {
-            const options = deliverySelect.querySelectorAll(".select__option");
-            options.forEach((option => {
-                option.addEventListener("click", (function() {
-                    const value = this.getAttribute("data-value");
-                    const price = deliveryPrices[value] ?? 0;
-                    if (!value) return;
-                    addOrReplaceService({
-                        value,
-                        label: "Delivery",
-                        type: "delivery",
-                        price
-                    });
-                    lockSelect(courierSelect);
-                }));
+        if (deliverySelect) deliverySelect.querySelectorAll(".select__option").forEach((option => {
+            option.addEventListener("click", (() => {
+                const value = option.getAttribute("data-value");
+                const label = option.textContent.trim();
+                const price = deliveryPrices[value] ?? 0;
+                if (!value) return;
+                addOrReplaceService({
+                    value,
+                    label,
+                    type: "delivery",
+                    price
+                });
             }));
-        }
-        if (courierSelect) {
-            const options = courierSelect.querySelectorAll(".select__option");
-            options.forEach((option => {
-                option.addEventListener("click", (function() {
-                    const value = this.getAttribute("data-value");
-                    const price = courierPrices[value] ?? 0;
-                    if (!value) return;
-                    addOrReplaceService({
-                        value,
-                        label: "Courier",
-                        type: "courier",
-                        price
-                    });
-                    lockSelect(deliverySelect);
-                }));
-            }));
-        }
+        }));
         if (serviceTypeSelect) {
             const observer = new MutationObserver((() => {
                 const isOpen = serviceTypeSelect.classList.contains("_select-open");
@@ -5827,20 +5801,6 @@
             }
             updateTotal();
         }));
-        function lockSelect(select) {
-            if (!select) return;
-            select.classList.add("select--disabled");
-            select.querySelectorAll(".select__option").forEach((opt => {
-                opt.setAttribute("disabled", "disabled");
-            }));
-        }
-        function unlockSelect(select) {
-            if (!select) return;
-            select.classList.remove("select--disabled");
-            select.querySelectorAll(".select__option").forEach((opt => {
-                opt.removeAttribute("disabled");
-            }));
-        }
         function highlightField(element) {
             if (!element) return;
             element.classList.add("highlight");
@@ -5853,7 +5813,7 @@
             if (!element) return;
             element.classList.remove("highlight");
         }
-        [ processingSelect, deliverySelect, serviceTypeSelect, courierSelect ].forEach((select => {
+        [ processingSelect, deliverySelect, serviceTypeSelect ].forEach((select => {
             if (!select) return;
             const options = select.querySelectorAll(".select__option");
             options.forEach((option => {
@@ -5879,13 +5839,6 @@
                     block: "center"
                 });
                 highlightField(deliverySelect);
-            }
-            if (type === "courier" && courierSelect) {
-                courierSelect.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center"
-                });
-                highlightField(courierSelect);
             }
             if (type === "service-type" && serviceTypeSelect) {
                 serviceTypeSelect.scrollIntoView({
